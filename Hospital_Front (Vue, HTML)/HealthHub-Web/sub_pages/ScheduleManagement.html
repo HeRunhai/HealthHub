@@ -1,0 +1,791 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>排班页面</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/排班页面/styles.css" type="text/css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
+    <script src="resources/scripts/jquery-3.2.1.min.js"></script>
+    <script src="resources/scripts/axure/axQuery.js"></script>
+    <script src="resources/scripts/axure/globals.js"></script>
+    <script src="resources/scripts/axutils.js"></script>
+    <script src="resources/scripts/axure/annotation.js"></script>
+    <script src="resources/scripts/axure/axQuery.std.js"></script>
+    <script src="resources/scripts/axure/doc.js"></script>
+    <script src="resources/scripts/messagecenter.js"></script>
+    <script src="resources/scripts/axure/events.js"></script>
+    <script src="resources/scripts/axure/recording.js"></script>
+    <script src="resources/scripts/axure/action.js"></script>
+    <script src="resources/scripts/axure/expr.js"></script>
+    <script src="resources/scripts/axure/geometry.js"></script>
+    <script src="resources/scripts/axure/flyout.js"></script>
+    <script src="resources/scripts/axure/model.js"></script>
+    <script src="resources/scripts/axure/repeater.js"></script>
+    <script src="resources/scripts/axure/sto.js"></script>
+    <script src="resources/scripts/axure/utils.temp.js"></script>
+    <script src="resources/scripts/axure/variables.js"></script>
+    <script src="resources/scripts/axure/drag.js"></script>
+    <script src="resources/scripts/axure/move.js"></script>
+    <script src="resources/scripts/axure/visibility.js"></script>
+    <script src="resources/scripts/axure/style.js"></script>
+    <script src="resources/scripts/axure/adaptive.js"></script>
+    <script src="resources/scripts/axure/tree.js"></script>
+    <script src="resources/scripts/axure/init.temp.js"></script>
+    <script src="resources/scripts/axure/legacy.js"></script>
+    <script src="resources/scripts/axure/viewer.js"></script>
+    <script src="resources/scripts/axure/math.js"></script>
+    <script src="resources/scripts/axure/jquery.nicescroll.min.js"></script>
+    <script src="data/document.js"></script>
+    <script src="files/排班页面/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+      <div id="container">
+
+      <!-- Unnamed (组合) -->
+      <div id="u185" class="ax_default" data-left="2253" data-top="442" data-width="104" data-height="32">
+
+        <!-- 新建按钮 (矩形) -->
+        <div id="u186" class="ax_default button" data-label="新建按钮" onclick="Add()">
+          <div id="u186_div" class=""></div>
+          <div id="u186_text" class="text">
+            <p style="font-size:16px;"><span style="text-decoration:none;">&nbsp;&nbsp;&nbsp; </span><span style="font-size:18px;text-decoration:none;">Add</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (图片 ) -->
+        <div id="u187" class="ax_default refs-design-apple">
+          <img id="u187_img" class="img " src="images/住院信息/u113.png"/>
+          <div id="u187_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u188" class="ax_default _文本段落">
+        <div id="u188_div" class=""></div>
+        <div id="u188_text" class="text ">
+          <p><span style="text-decoration:none;">Work Schedule Management</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u189" class="ax_default label">
+        <div id="u189_div" class=""></div>
+        <div id="u189_text" class="text ">
+          <p><span style="text-decoration:none;font-size: 18px;">Date:</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u190" class="ax_default label">
+        <div id="u190_div" class=""></div>
+        <div id="u190_text" class="text ">
+          <p><span style="text-decoration:none;font-size: 18px;">Department:</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (表格) -->
+      <div id="u191" class="ax_default">
+        <div class="main2">
+          <div>
+            <div style="max-height: 600px; overflow-y: scroll">
+              <table id="table1" cellspacing="0px">
+                <thead style="font-size: 18px;">
+                  <tr class="tableTitle" align="center">
+                    <td class="colId">No.</td>
+                    <td class="colDep">Department</td>
+                    <td class="colId2">Doctor Id</td>
+                    <td class="col4">Name</td>
+                    <td class="col7">Date</td>
+                    <td class="col6">Time period</td>
+                    <td class="col7">Status</td>
+                    <td class="col7">Update date</td>
+                    <td class="col7">Modifier</td>
+                    <td class="colOperation">Operation</td>
+                  </tr>
+                </thead>
+                <tbody id="ScheduleInfo" style="font-size: 18px;">
+                  <!--Here data from controller and set by script-->
+                </tbody>
+              </table>
+            </div>
+
+            <div id="lowerLbl" align="center">
+              <p>Total</p>
+              <p id="Total_PageNum">0</p>
+              <p>Pages</p>
+              <button onclick="last()"><</button>
+              <button id="page" style="background-color: #5899ce; color: white" value="1" disabled>1</button>
+              <button onclick="next()">></button>
+              &nbsp;
+              <p>Go to Page</p>
+              <input type="text" id="goPage"/>
+              <img src="../static/Icons/next-button.png" onclick="goPage()" title="Go page" style="position: absolute; max-width: 22px;max-height: 22px; padding-left: 10px;"/>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (组合) -->
+      <div id="u240" class="ax_default" data-left="2526" data-top="867" data-width="599" data-height="28">
+
+        <!-- Unnamed (组合) -->
+        <div id="u241" class="ax_default" data-left="2526" data-top="867" data-width="599" data-height="28">
+
+          <!-- Unnamed (组合) -->
+          <div id="u242" class="ax_default" data-left="2526" data-top="867" data-width="599" data-height="28">
+
+            <!-- Unnamed (组合) -->
+            <div id="u243" class="ax_default" data-left="2526" data-top="867" data-width="599" data-height="28">
+
+              <!-- Unnamed (组合) -->
+              <div id="u244" class="ax_default" data-left="2526" data-top="867" data-width="599" data-height="28">
+
+                <!-- Unnamed (组合) -->
+                <div id="u245" class="ax_default" data-left="2526" data-top="867" data-width="599" data-height="28">
+
+                  <!-- Unnamed (组合) -->
+                  <div id="u246" class="ax_default" data-left="2526" data-top="867" data-width="599" data-height="28">
+
+                    <!-- Unnamed (组合) -->
+                    <div id="u247" class="ax_default" data-left="2526" data-top="867" data-width="599" data-height="28">
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (文本框) -->
+      <div id="u266" class="ax_default text_field">
+        <div id="u266_div" class=""></div>
+        <input id="u266_input" type="date" value="" class="u266_input" style="font-size: 18px;"/>
+      </div>
+
+      <!-- Unnamed (下拉列表) -->
+      <div id="u267" class="ax_default droplist">
+        <div id="u267_div" class="" style="width: 230px"></div>
+        <select id="u267_input" class="u267_input" style="font-size: 18px;width: 230px">
+          <option class="u267_input_option" value="emergency department">emergency department</option>
+          <option class="u267_input_option" value="dermatology">dermatology</option>
+          <option class="u267_input_option" value="ear, nose &amp; throat">ear, nose &amp; throat</option>
+          <option class="u267_input_option" value="gynecology &amp; obstetrics">gynecology &amp; obstetrics</option>
+          <option class="u267_input_option" value="ophthalmology">ophthalmology</option>
+          <option class="u267_input_option" value="stomatology">stomatology</option>
+        </select>
+      </div>
+
+      <!-- Add (组合) -->
+      <div id="u268" class="ax_default ax_default_hidden" data-label="Add" style="display:none; visibility: hidden" data-left="2507" data-top="333" data-width="593" data-height="562">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u269" class="ax_default box_1">
+          <div id="u269_div" class=""></div>
+          <div id="u269_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u270" class="ax_default label">
+          <div id="u270_div" class=""></div>
+          <div id="u270_text" class="text ">
+            <p><span style="text-decoration:none;">Department:</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u271" class="ax_default label">
+          <div id="u271_div" class=""></div>
+          <div id="u271_text" class="text ">
+            <p><span style="text-decoration:none;">Doctor:</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u272" class="ax_default label">
+          <div id="u272_div" class=""></div>
+          <div id="u272_text" class="text ">
+            <p><span style="text-decoration:none;">Date:</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u273" class="ax_default label">
+          <div id="u273_div" class=""></div>
+          <div id="u273_text" class="text ">
+            <p><span style="text-decoration:none;">Duration:</span></p>
+          </div>
+        </div>
+
+        <div id="u273Type" class="ax_default label">
+          <div id="u273Type_div" class=""></div>
+          <div id="u273Type_text" class="text ">
+            <p><span style="text-decoration:none;">Type:</span></p>
+          </div>
+        </div>
+
+        <!-- 确定 (矩形) -->
+        <div id="u274" class="ax_default button" data-label="确定" onclick="confirmAdd()">
+          <div id="u274_div" class=""></div>
+          <div id="u274_text" class="text ">
+            <p><span style="text-decoration:none;">Confirm</span></p>
+          </div>
+        </div>
+
+        <!-- 取消 (矩形) -->
+        <div id="u275" class="ax_default button" data-label="取消">
+          <div id="u275_div" class=""></div>
+          <div id="u275_text" class="text ">
+            <p><span style="text-decoration:none;">Cancel</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (下拉列表) -->
+        <div id="u276" class="ax_default droplist">
+          <div id="u276_div" class=""></div>
+          <select id="u276_input" class="u276_input">
+            <option value="Alan">Alan</option>
+            <option value="Alex">Alex</option>
+          </select>
+        </div>
+
+        <!-- Unnamed (下拉列表) -->
+        <div id="u277" class="ax_default droplist">
+          <div id="u277_div" class=""></div>
+          <select id="u277_input" class="u277_input">
+            <option class="u277_input_option" value="08:00 - 10:00">08:00 - 10:00</option>
+            <option class="u277_input_option" value="10:00 - 12:00">10:00 - 12:00</option>
+            <option class="u277_input_option" value="14:00 - 16:00">14:00 - 16:00</option>
+            <option class="u277_input_option" value="16:00 - 18:00">16:00 - 18:00</option>
+          </select>
+        </div>
+
+        <div id="u277Type" class="ax_default droplist">
+          <div id="u277Type_div" class=""></div>
+          <select id="u277Type_input" class="u277Type_input">
+            <option class="u277Type_input_option" value="Appointment">Appointment</option>
+            <option class="u277Type_input_option" value="Consultation">Consultation</option>
+          </select>
+        </div>
+
+        <!-- Unnamed (下拉列表) -->
+        <div id="u278" class="ax_default droplist">
+          <div id="u278_div" class=""></div>
+          <select id="u278_input" class="u278_input">
+            <option class="u278_input_option" value="dermatology">dermatology</option>
+            <option class="u278_input_option" value="ear, nose &amp; throat">ear, nose &amp; throat</option>
+            <option class="u278_input_option" value="emergency department">emergency department</option>
+            <option class="u278_input_option" value="gynecology &amp; obstetrics">gynecology &amp; obstetrics</option>
+            <option class="u278_input_option" value="ophthalmology">ophthalmology</option>
+            <option class="u278_input_option" value="stomatology">stomatology</option>
+          </select>
+        </div>
+
+        <!-- Unnamed (文本框) -->
+        <div id="u279" class="ax_default text_field">
+          <div id="u279_div" class=""></div>
+          <input id="u279_input" type="date" value="" class="u279_input"/>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u280" class="ax_default _文本段落">
+          <div id="u280_div" class=""></div>
+          <div id="u280_text" class="text ">
+            <p><span style="text-decoration:none;">Add Duty Schedule</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u281" class="ax_default label">
+          <div id="u281_div" class=""></div>
+          <div id="u281_text" class="text ">
+            <p><span style="text-decoration:none;">Submitted by: Admin</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 弹窗提示(组合) -->
+      <div id="u282" class="ax_default ax_default_hidden" data-label="是否删除该排班" style="display:none; visibility: hidden;" data-left="2591" data-top="442" data-width="424" data-height="204">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u283" class="ax_default box_1">
+          <div id="u283_div" class=""></div>
+          <div id="u283_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u284" class="ax_default _文本段落">
+          <div id="u284_div" class=""></div>
+          <div id="u284_text" class="text">
+            <p><span style="text-decoration:none;font-size: 22px;padding-left: 36px;">Sure to delete the following shift?</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u285" class="ax_default label" style="padding-top: 10px;">
+          <div id="u285_div" class=""></div>
+          <div id="u285_text" class="text ">
+            <p style="font-size: 18px;">No: <span style="text-decoration:none;" id="delNo">2</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u286" class="ax_default label" style="padding-top: 10px;">
+          <div id="u286_div" class=""></div>
+          <div id="u286_text" class="text ">
+            <p style="font-size: 18px;">Name: <span style="text-decoration:none;" id="delName">Lisa</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u287" class="ax_default label" style="padding-top: 10px;">
+          <div id="u287_div" class=""></div>
+          <div id="u287_text" class="text ">
+            <p style="font-size: 18px;">Date: <span style="text-decoration:none;" id="delDate">2023-05-30</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u288" class="ax_default label" style="margin-top: 10px;">
+          <div id="u288_div" class=""></div>
+          <div id="u288_text" class="text ">
+            <p style="font-size: 18px;">Duration: <span style="text-decoration:none;" id="delTime">8:00-10:00</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u289" class="ax_default primary_button" style="margin-top: 10px;" onclick="confirmDel()">
+          <div id="u289_div" class=""></div>
+          <div id="u289_text" class="text ">
+            <p><span style="text-decoration:none;font-size: 18px;">Confirm</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u290" class="ax_default button" style="padding-top: 10px;">
+          <div id="u290_div" class="" style="margin-top: 10px;"></div>
+          <div id="u290_text" class="text ">
+            <p><span style="text-decoration:none;font-size: 18px;">Cancel</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 该弹框已删除。 (组合) -->
+      <div id="u291" class="ax_default ax_default_hidden" data-label="该弹框已删除。" style="display:none; visibility: hidden" data-left="2083" data-top="216" data-width="1440" data-height="836">
+
+        <!-- Unnamed (组合) -->
+        <div id="u292" class="ax_default" data-left="0" data-top="0" data-width="0" data-height="0">
+
+          <!-- Unnamed (矩形) -->
+          <div id="u293" class="ax_default box_3">
+            <div id="u293_div" class=""></div>
+            <div id="u293_text" class="text " style="display:none; visibility: hidden">
+              <p></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Unnamed (组合) -->
+        <div id="u294" class="ax_default" data-left="0" data-top="0" data-width="0" data-height="0">
+
+          <!-- Unnamed (矩形) -->
+          <div id="u295" class="ax_default box_1">
+            <div id="u295_div" class=""></div>
+            <div id="u295_text" class="text ">
+              <p><span style="text-decoration:none;"><br></span></p><p><span style="text-decoration:none;"><br></span></p><p><span style="text-decoration:none;" id="tips">This schedule has been deleted</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (形状) -->
+          <div id="u296" class="ax_default icon">
+            <img id="u296_img" class="img " src="images/排班页面/u296.svg"/>
+            <div id="u296_text" class="text " style="display:none; visibility: hidden">
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (组合) -->
+      <div id="u297" class="ax_default" data-left="3361" data-top="554" data-width="54" data-height="25">
+
+        <!-- Unnamed (组合) -->
+        <div id="u298" class="ax_default" data-left="3361" data-top="554" data-width="54" data-height="25">
+
+          <!-- Operation -->
+          <!-- <div id="u299" class="ax_default" data-left="3361" data-top="554" data-width="54" data-height="25"> -->
+
+            <!-- <div id="u300" class="ax_default" data-left="3361" data-top="554" data-width="54" data-height="25"> -->
+
+              <!-- Unnamed (矩形) -->
+              <!-- <div id="u301" class="ax_default button">
+                <div id="u301_div" class=""></div>
+                <div id="u301_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div> -->
+
+              <!-- Unnamed (形状) -->
+              <!-- <div id="u302" class="ax_default icon">
+                <img id="u302_img" class="img " src="images/排班页面/u302.svg"/>
+                <div id="u302_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+            </div> -->
+
+            <!-- Unnamed (矩形) -->
+            <!-- <div id="u303" class="ax_default label">
+              <div id="u303_div" class=""></div>
+              <div id="u303_text" class="text ">
+                <p><span style="text-decoration:none;">Del</span></p>
+              </div>
+            </div>
+          </div> -->
+
+        </div>
+      </div>
+
+      <!-- Edit (组合) -->
+      <div id="u304" class="ax_default ax_default_hidden" data-label="Edit" style="display:none; visibility: hidden" data-left="2507" data-top="333" data-width="593" data-height="562">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u305" class="ax_default box_1">
+          <div id="u305_div" class=""></div>
+          <div id="u305_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u306" class="ax_default label">
+          <div id="u306_div" class=""></div>
+          <div id="u306_text" class="text ">
+            <p><span style="text-decoration:none;">Department:</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u307" class="ax_default label">
+          <div id="u307_div" class=""></div>
+          <div id="u307_text" class="text ">
+            <p><span style="text-decoration:none;">Doctor:</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u308" class="ax_default label">
+          <div id="u308_div" class=""></div>
+          <div id="u308_text" class="text ">
+            <p><span style="text-decoration:none;">Date:</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u309" class="ax_default label">
+          <div id="u309_div" class=""></div>
+          <div id="u309_text" class="text ">
+            <p><span style="text-decoration:none;">Duration:</span></p>
+          </div>
+        </div>
+
+        <!-- 确定 (矩形) -->
+        <div id="u310" class="ax_default button" data-label="确定" onclick="confirmEdit()">
+          <div id="u310_div" class=""></div>
+          <div id="u310_text" class="text ">
+            <p><span style="text-decoration:none;">Confirm</span></p>
+          </div>
+        </div>
+
+        <span id="ChosenWno" style="display: none;"></span>
+
+        <!-- 取消 (矩形) -->
+        <div id="u311" class="ax_default button" data-label="取消">
+          <div id="u311_div" class=""></div>
+          <div id="u311_text" class="text ">
+            <p><span style="text-decoration:none;">Cancel</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (下拉列表) -->
+        <div id="u312" class="ax_default droplist">
+          <div id="u312_div" class=""></div>
+          <select id="u312_input" class="u312_input">
+          </select>
+        </div>
+
+        <!-- Unnamed (下拉列表) -->
+        <div id="u313" class="ax_default droplist">
+          <div id="u313_div" class=""></div>
+          <select id="u313_input" class="u313_input">
+            <option class="u313_input_option" value="08:00 - 10:00">08:00 - 10:00</option>
+            <option class="u313_input_option" value="10:00 - 12:00">10:00 - 12:00</option>
+            <option class="u313_input_option" value="14:00 - 16:00">14:00 - 16:00</option>
+            <option class="u313_input_option" value="16:00 - 18:00">16:00 - 18:00</option>
+          </select>
+        </div>
+
+        <!-- Unnamed (下拉列表) -->
+        <div id="u314" class="ax_default droplist">
+          <div id="u314_div" class=""></div>
+          <select id="u314_input" class="u314_input">
+            <option class="u314_input_option" value="dermatology">dermatology</option>
+            <option class="u314_input_option" value="ear, nose &amp; throat">ear, nose &amp; throat</option>
+            <option class="u314_input_option" value="emergency department">emergency department</option>
+            <option class="u314_input_option" value="gynecology &amp; obstetrics">gynecology &amp; obstetrics</option>
+            <option class="u314_input_option" value="ophthalmology">ophthalmology</option>
+            <option class="u314_input_option" value="stomatology">stomatology</option>
+          </select>
+        </div>
+
+        <!-- Unnamed (文本框) -->
+        <div id="u315" class="ax_default text_field">
+          <div id="u315_div" class=""></div>
+          <input id="u315_input" type="date" value="" class="u315_input"/>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u316" class="ax_default _文本段落">
+          <div id="u316_div" class=""></div>
+          <div id="u316_text" class="text ">
+            <p><span style="text-decoration:none;">Edit Duty Schedule</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u317" class="ax_default label">
+          <div id="u317_div" class=""></div>
+          <div id="u317_text" class="text ">
+            <p><span style="text-decoration:none;">Submitted by: Admin</span></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+    <script src="resources/scripts/axure/ios.js"></script>
+    <script src="resources/scripts/axure/ios.js"></script>
+    <script type="text/javascript" src="../lib/Global.js"></script>
+    <script type="text/javascript" src="../lib/jquery/1.9.1/jquery.js"></script>
+    <script type="text/javascript">
+      jQuery.noConflict();
+      var dateInput1 = document.getElementById("u266_input");
+      var dateInput2 = document.getElementById("u315_input");
+      var dateInput3 = document.getElementById("u279_input");
+      var today = new Date();
+      var year = today.getFullYear();
+      var month = String(today.getMonth() + 1).padStart(2, "0");
+      var day = String(today.getDate()).padStart(2, "0");
+      var defaultDate = year + "-" + month + "-" + day;
+      dateInput1.value = defaultDate;
+      dateInput2.value = defaultDate;
+      dateInput3.value = defaultDate;
+      var pageStart = 0;
+      var pageSize = 8;
+
+      var account = sessionStorage.getItem('account');
+      var auth = sessionStorage.getItem('auth');
+      var department = sessionStorage.getItem('department');
+      var modifier = sessionStorage.getItem('doctor_name');
+      jQuery(document).ready(function ($) {
+        getSchedule();
+
+        $('#u314_input').on('change',function(){
+          getDoctorsByDep($("#u314_input option:selected").val())
+        })
+        $('#u278_input').on('change',function(){
+          getDoctorsByDep2($("#u278_input option:selected").val())
+        })
+
+        // 监听时间和科室变化
+        $('#u266_input').on('change',function(){
+          defaultDate = document.getElementById("u266_input").value
+          getSchedule()
+        })
+
+        $('#u267_input').on('change',function(){
+          department = $("#u267_input option:selected").val()
+          getSchedule()
+        })
+
+        setInterval(getSchedule, 5000);
+      });
+
+      function getSchedule() {
+        $.ajax({
+          type: "GET",
+          url: site_add + `/doctor/getScheduleByDep/${department}/${defaultDate}?authorization=${auth}`,
+          dataType: "json",
+          success: function (resp) {
+            $("#ScheduleInfo").empty();
+              $.each(resp, function (i, n) {
+                $("#ScheduleInfo").append("<tr>" +
+                  "<td align='center'>" + n.wno + "</td>" +
+                  "<td align='center'>" + n.department + "</td>" +
+                  "<td align='center'>" + n.dno + "</td>" +
+                  "<td align='center'>" + n.name + "</td>" +
+                  "<td align='center'>" + n.date + "</td>" +
+                  "<td align='center'>" + n.time + "</td>" +
+                  "<td align='center'>" + "Normal" + "</td>" +
+                  "<td align='center'>" +  n.updateDate + "</td>" +
+                  "<td align='center'>" + n.modifier + "</td>" +
+                  "<td align='center' style='width:110px; padding-left:10px;'><input type=\"button\" value=\"Edit\" style='width:50px; font-size:16px;' onclick=\"Edit(this)\" class=\"operation_btn1\">" +
+                  "<input type=\"button\" value=\"Del\" onclick=\"Del(this)\" style='width:50px;font-size:16px;' class=\"operation_btn2\"></td>" +
+                  "</tr>")
+                });
+              
+              if (resp.length / pageSize > parseInt((resp.length / pageSize)))
+                  total_pageNum = parseInt((resp.length / pageSize)) + 1;
+                else
+                  total_pageNum = resp.length / pageSize;
+                $("#Total_PageNum").html(total_pageNum);
+            }
+        })
+      }
+
+      function getDoctorsByDep(department){
+        $.ajax({
+                type: "GET",
+                url: site_add + `/doctor/getDoctorsByDep/${department}?authorization=${auth}`,
+                dataType: "json",
+                async: false,
+                success: function (resp) {
+                  $('#u312_input').empty();
+                  $.each(resp, function (i, n) {
+                  $('#u312_input').append(`<option value=${n.name}>${n.name}</option>`);
+                });
+                }
+            })
+      }
+
+      function getDoctorsByDep2(department){
+        $.ajax({
+                type: "GET",
+                url: site_add + `/doctor/getDoctorsByDep/${department}?authorization=${auth}`,
+                dataType: "json",
+                async: false,
+                success: function (resp) {
+                  $('#u276_input').empty();
+                  $.each(resp, function (i, n) {
+                  $('#u276_input').append(`<option value=${n.name}>${n.name}</option>`);
+                });
+                }
+            })
+      }
+
+      function Add(){
+        getDoctorsByDep2($("#u278_input option:selected").val())
+      }
+
+      function confirmAdd(){
+        var department = $("#u278_input option:selected").val()
+        var name = $("#u276_input option:selected").val()
+        var date = $("#u279_input").val()
+        var time = $("#u277_input option:selected").val()
+        var type = $("#u277Type_input option:selected").val()
+        $.ajax({
+                type: "PUT",
+                url: site_add + `/doctor/addSchedule/${department}/${name}/${date}/${time}/${type}/${modifier}?authorization=${auth}`,
+                dataType: "json",
+                async: false,
+                success: function (resp) {
+                  $("#tips").text("Add schedule successful")
+                  $("#u291").css("display","block");
+                  $("#u291").css("visibility","visible");
+                  getSchedule()
+                }
+            })
+        setTimeout(function (){
+          $("#u291").css("display","none");
+          $("#u291").css("visibility","hidden");
+        }, 1000);
+      }
+
+      function Edit(obj){
+        $("#u304").css("display","block");
+        $("#u304").css("visibility","visible");
+
+        var wno = $(obj).parent('td').parent('tr').children('td').eq(0).html();
+        var department = $(obj).parent('td').parent('tr').children('td').eq(1).html();
+        var name = $(obj).parent('td').parent('tr').children('td').eq(3).html();
+        var date = $(obj).parent('td').parent('tr').children('td').eq(4).html();
+        var timePeriod = $(obj).parent('td').parent('tr').children('td').eq(5).html();
+        
+        getDoctorsByDep(department)
+        $("#ChosenWno").val(wno);
+        $("#u314_input").val(department);
+        $("#u314_input").attr("disabled",true);
+        $("#u312_input").val(name);
+        $("#u315_input").value = date;
+        $("#u313_input").val(timePeriod);
+      }
+
+      function confirmEdit(){
+        var wno = $("#ChosenWno").val()
+        var name = $("#u312_input option:selected").val()
+        var date = $("#u315_input").val()
+        var time = $("#u313_input option:selected").val()
+
+        $.ajax({
+                type: "POST",
+                url: site_add + `/doctor/editSchedule/${wno}/${name}/${date}/${time}/${modifier}?authorization=${auth}`,
+                dataType: "json",
+                async: false,
+                success: function (resp) {
+                  $("#tips").text("Update schedule successful")
+                  $("#u291").css("display","block");
+                  $("#u291").css("visibility","visible");
+                  getSchedule()
+                }
+            })
+        setTimeout(function (){
+          $("#u291").css("display","none");
+          $("#u291").css("visibility","hidden");
+        }, 1000);
+      }
+
+      function Del(obj){
+        $("#u282").css("display","block");
+        $("#u282").css("visibility","visible");
+
+        var no = $(obj).parent('td').parent('tr').children('td').eq(0).html();
+        var name = $(obj).parent('td').parent('tr').children('td').eq(3).html();
+        var date = $(obj).parent('td').parent('tr').children('td').eq(4).html();
+        var timePeriod = $(obj).parent('td').parent('tr').children('td').eq(5).html();
+
+        $("#delNo").text(no);
+        $("#delName").text(name);
+        $("#delDate").text(date);
+        $("#delTime").text(timePeriod);
+      }
+
+      function confirmDel(){
+        var wno =  $("#delNo").text();
+        $.ajax({
+                type: "DELETE",
+                url: site_add + `/doctor/delSchedule/${wno}?authorization=${auth}`,
+                dataType: "json",
+                async: false,
+                success: function (resp) {
+                  $("#tips").text("Delete schedule successful")
+                  getSchedule()
+                }
+            })
+      }
+
+    </script>
+  </body>
+</html>

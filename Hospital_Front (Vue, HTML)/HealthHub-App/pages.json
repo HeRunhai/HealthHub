@@ -1,0 +1,140 @@
+{
+	"pages": [
+		{
+		    "path" : "pages/login/login",
+		    "style" :                                                                                    
+		    {
+		        "navigationStyle": "custom",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		},
+		{
+		    "path" : "pages/login/forget",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		},
+		{
+		    "path" : "pages/login/register",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		},
+		{
+			"path": "pages/home/home",
+			"style": {
+				"navigationBarTitleText": "home",
+				"navigationBarBackgroundColor": "#87CEFA",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/home/appointment/department",
+			"style": {
+				"navigationBarTitleText": "department",
+				"navigationBarBackgroundColor": "#87CEFA"
+			}
+		},
+		{
+			"path": "pages/home/consultation/department",
+			"style": {
+				"navigationBarTitleText": "department",
+				"navigationBarBackgroundColor": "#87CEFA"
+			}
+		},
+		{
+			"path": "pages/home/appointment/doctors_list",
+			"style": {
+				"navigationBarTitleText": "doctors",
+				"navigationBarBackgroundColor": "#87CEFA"
+			}
+		},
+		{
+			"path": "pages/home/appointment/doctor_page",
+			"style": {
+				"navigationBarTitleText": "doctor page",
+				"navigationBarBackgroundColor": "#87CEFA"
+			}
+		},
+		{
+			"path": "pages/home/appointment/finish",
+			"style": {
+				"navigationBarTitleText": "finish",
+				"navigationBarBackgroundColor": "#87cefa"
+			}
+		},
+		{
+			"path": "pages/home/consultation/finish",
+			"style": {
+				"navigationBarTitleText": "finish",
+				"navigationBarBackgroundColor": "#87cefa"
+			}
+		},
+		{
+			"path": "pages/home/consultation/doctors_list",
+			"style": {
+				"navigationBarTitleText": "doctors list",
+				"navigationBarBackgroundColor": "#87CEFA"
+			}
+		},
+		{
+			"path": "pages/message/messages",
+			"style": {
+				"navigationBarTitleText": "messages",
+				"navigationBarBackgroundColor": "#87CEFA",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/records/records",
+			"style": {
+				"navigationBarTitleText": "records",
+				"navigationBarBackgroundColor": "#87cefa",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/me/me",
+			"style": {
+				"navigationBarTitleText": "me",
+				"navigationBarBackgroundColor": "#87cefa",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/me/mycard/mycard",
+			"style": {
+				"navigationBarTitleText": "Personal Information",
+				"navigationBarBackgroundColor": "#87CEFA"
+			}
+		},
+		{
+			"path": "pages/webview",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		}
+        ,{
+            "path" : "pages/me/setting/setting",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Setting",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "HealthHub",
+		"navigationBarBackgroundColor": "#87cefa",
+		"navigationStyle": "default"
+	}
+}

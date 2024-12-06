@@ -1,0 +1,79 @@
+/**
+ * 修改common/diygw-ui/index.scss 可以取消相关组件样式
+ * 修改common/diygw-ui/iconfont.scss 如果发布APP可能会图标字体找不到的问题，加上https测试
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.u-checkbox.data-v-a25f12a0 {
+
+  display: flex;
+  flex-direction: row;
+
+  overflow: hidden;
+  flex-direction: row;
+  align-items: center;
+}
+.u-checkbox-label--left.data-v-a25f12a0 {
+  flex-direction: row;
+}
+.u-checkbox-label--right.data-v-a25f12a0 {
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+.u-checkbox__icon-wrap.data-v-a25f12a0 {
+  box-sizing: border-box;
+  transition-property: border-color, background-color, color;
+  transition-duration: 0.2s;
+  color: #606266;
+
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  justify-content: center;
+  color: transparent;
+  text-align: center;
+  margin-right: 0px;
+  font-size: 6px;
+  border-width: 1px;
+  border-color: #c8c9cc;
+  border-style: solid;
+}
+.u-checkbox__icon-wrap--circle.data-v-a25f12a0 {
+  border-radius: 100%;
+}
+.u-checkbox__icon-wrap--square.data-v-a25f12a0 {
+  border-radius: 3px;
+}
+.u-checkbox__icon-wrap--checked.data-v-a25f12a0 {
+  color: #fff;
+  background-color: red;
+  border-color: #2979ff;
+}
+.u-checkbox__icon-wrap--disabled.data-v-a25f12a0 {
+  background-color: #ebedf0 !important;
+}
+.u-checkbox__icon-wrap--disabled--checked.data-v-a25f12a0 {
+  color: #c8c9cc !important;
+}
+.u-checkbox__label.data-v-a25f12a0 {
+  word-wrap: break-word;
+  margin-left: 5px;
+  margin-right: 12px;
+  color: #606266;
+  font-size: 15px;
+}
+.u-checkbox__label--disabled.data-v-a25f12a0 {
+  color: #c8c9cc;
+}

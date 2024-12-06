@@ -1,0 +1,31 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/home/appointment/department",
+    "pages/home/appointment/doctors_list",
+    "pages/home/appointment/doctor_page",
+    "pages/home/appointment/finish",
+    "pages/home/consultation/doctors_list",
+    "pages/message/messages",
+    "pages/records/records",
+    "pages/me/me",
+    "pages/me/mycard/mycard",
+    "pages/webview"
+  ],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "HealthHub",
+    "navigationBarBackgroundColor": "#87cefa",
+    "navigationStyle": "default"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "地理位置信息将用于标记位置"
+    }
+  },
+  "requiredPrivateInfos": [
+    "getLocation",
+    "chooseLocation"
+  ],
+  "usingComponents": {}
+}

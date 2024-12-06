@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Data presentation</title>
+  <link href="../../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="../../vendors/nprogress/nprogress.css" rel="stylesheet">
+  <link href="../../build/css/custom.min.css" rel="stylesheet">
+</head>
+
+<body class="nav-md">
+  <div class="container body">
+    <div class="main_container">
+
+      <!-- Template Section-->
+      <div class="Template">
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            <div class="navbar nav_title" style="border: 0;">
+              <a href="index.html" class="site_title"><img src="../../static/Icons/Logo-White.png"
+                  style="width: 75px; height: 75px; object-fit: cover;"></img><span>HealthHub</span></a>
+            </div>
+            <div class="clearfix"></div>
+            <!-- menu profile quick info -->
+            <div class="profile clearfix">
+              <div class="profile_pic">
+                <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+              </div>
+              <div class="profile_info">
+                <span>Welcome, Administrator</span>
+                <h2 id="Dname"></h2>
+              </div>
+            </div>
+            <!-- /menu profile quick info -->
+
+            <br />
+
+            <!-- sidebar menu -->
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              <div class="menu_section">
+                <h3>General</h3>
+                <ul class="nav side-menu">
+                  <li><a><i class="fa fa-bar-chart-o"></i> Data Presentation <span
+                        class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="Data.html">Hospital Data</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-desktop"></i> Patient hospitalization <span
+                        class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="index.html">Hospitalization</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-table"></i> Schedule Management <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="Schedule.html">Schedule</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-clone"></i>Self Information<span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="Account Management.html">Account Management</a></li>
+                      <li><a href="Edit personal information.html">Edit personal
+                          information</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- /sidebar menu -->
+
+            <!-- /menu footer buttons -->
+            <div class="sidebar-footer hidden-small">
+              <a data-toggle="tooltip" data-placement="top" title="Settings">
+                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="FullScreen" id="full-screen-btn"
+                onclick="Fullscreen()">
+                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="Lock">
+                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="Logout" href="../../login.html">
+                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+              </a>
+            </div>
+            <!-- /menu footer buttons -->
+          </div>
+        </div>
+
+        <!-- top navigation -->
+        <div class="top_nav">
+          <div class="nav_menu">
+            <div class="nav toggle">
+              <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+            </div>
+            <nav class="nav navbar-nav">
+              <ul class=" navbar-right">
+                <li class="nav-item dropdown open" style="padding-left: 15px;">
+                  <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown"
+                    data-toggle="dropdown" aria-expanded="false">
+                    <img src="images/img.jpg" alt=""><span id="Dname2"></span>
+                  </a>
+                  <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="Edit personal information.html"> Profile</a>
+                    <a class="dropdown-item" href="Account Management.html">
+                      <span class="badge bg-red pull-right">Account</span>
+                      <span>Settings</span>
+                    </a>
+                    <a class="dropdown-item" href="../../Help.html">Help</a>
+                    <a class="dropdown-item" href="../../login.html"><i class="fa fa-sign-out pull-right"></i>Log
+                      Out</a>
+                  </div>
+                </li>
+
+                <li role="presentation" class="nav-item dropdown open">
+                  <a href="javascript:;" class="dropdown-toggle info-number" id="navbarDropdown1" data-toggle="dropdown"
+                    aria-expanded="false">
+                    <i class="fa fa-envelope-o"></i>
+                    <span class="badge bg-green">1</span>
+                  </a>
+                  <ul class="dropdown-menu list-unstyled msg_list" role="menu" aria-labelledby="navbarDropdown1">
+                    <li class="nav-item">
+                      <a class="dropdown-item">
+                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                        <span>
+                          <span id="Dname2">John Smith</span>
+                          <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                          Film festivals used to be do-or-die moments for movie makers. They
+                          were
+                          where...
+                        </span>
+                      </a>
+                    </li>
+
+                    <li class="nav-item">
+                      <div class="text-center">
+                        <a class="dropdown-item">
+                          <strong>See All Alerts</strong>
+                          <i class="fa fa-angle-right"></i>
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- /top navigation -->
+
+      </div>
+      <!-- /Template Section-->
+
+      <!-- page content -->
+      <div class="right_col" role="main">
+        <div class="">
+          <div class="page-title">
+            <div class="title_left">
+              <h3>HealthHub <small style="padding-left: 15px;">Hospital Data Analysis</small></h3>
+            </div>
+
+            <div class="title_right">
+              <div class="col-md-5 col-sm-5   form-group pull-right top_search">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Search for...">
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">Go!</button>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="clearfix"></div>
+
+          <div class="row">
+            <div class="col-md-6 col-sm-6  ">
+              <div class="x_panel">
+                <div class="x_title">
+                  <h2>Monthly medical visits number</h2>
+                  <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i
+                          class="fa fa-wrench"></i></a>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Settings 1</a>
+                        <a class="dropdown-item" href="#">Settings 2</a>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="clearfix"></div>
+                </div>
+
+                <div class="x_content">
+                  <canvas id="lineChart"></canvas>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="col-md-6 col-sm-6">
+              <div class="x_panel">
+                <div class="x_title">
+                  <h2>Doctor shifts number (2h/shift)</h2>
+                  <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i
+                          class="fa fa-wrench"></i></a>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Settings 1</a>
+                        <a class="dropdown-item" href="#">Settings 2</a>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                  <canvas id="mybarChart"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="clearfix"></div>
+
+          <div class="row">
+            <div class="col-md-6 col-sm-6  ">
+              <div class="x_panel">
+                <div class="x_title">
+                  <h2>Num of patients by department</h2>
+                  <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i
+                          class="fa fa-wrench"></i></a>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Settings 1</a>
+                        <a class="dropdown-item" href="#">Settings 2</a>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                  <canvas id="canvasRadar"></canvas>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-sm-6  ">
+              <div class="x_panel">
+                <div class="x_title">
+                  <h2>Distribution of inpatients</h2>
+                  <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i
+                          class="fa fa-wrench"></i></a>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Settings 1</a>
+                        <a class="dropdown-item" href="#">Settings 2</a>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                  <canvas id="pieChart"></canvas>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="clearfix"></div>
+        </div>
+
+      </div>
+    </div>
+    <!-- page content -->
+  </div>
+  </div>
+
+  <script src="../../vendors/jquery/dist/jquery.min.js"></script>
+  <script src="../../lib/jquery/3.4.1/jquery-3.4.1.js"></script>
+  <script src="../../vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../vendors/fastclick/lib/fastclick.js"></script>
+  <script src="../../vendors/nprogress/nprogress.js"></script>
+  <script src="../../vendors/Chart.js/dist/Chart.min.js"></script>
+  <script src="../../build/js/custom.js"></script>
+  <script type="text/javascript" src="../../lib/Global.js"></script>
+  <script type="text/javascript" src="../../js/myJavaScript.js"></script>
+  <script type="text/javascript">
+    // jQuery.noConflict();
+    var account = sessionStorage.getItem('account');
+    var auth = sessionStorage.getItem('auth');
+    var Month_tag = [];   // for all month tags
+    var Dep_tag = [];
+
+    window.onload = function() {
+      if (account === null || auth === null) {
+        alert("please login first");
+        window.location.href = "../../login.html";
+      }
+      getDoctorInfo();
+      getLineChart();
+      getBarChart();
+      getCanvasRadar();
+      getPieChart();
+    }
+
+    function getDoctorInfo() {
+      $.ajax({
+        type: "GET",
+        url: site_add + `/doctor/${account}?authorization=${auth}`,
+        dataType: "json",
+        success: function (resp) {
+          department = resp.department;
+          dno = resp.dno;
+          sessionStorage.setItem('dno', resp.dno)
+          sessionStorage.setItem('doctor_name', resp.name)
+          sessionStorage.setItem('department', resp.department)
+          sessionStorage.setItem('doctor_avatar', resp.avatar)
+          $("#Dname").html(resp.name);
+          $("#Dname2").html(resp.name);
+        }
+      })
+    }
+
+    function getLineChart() {
+      $.ajax({
+        type: "GET",
+        url: site_add + `/register/getLineChart/Appointment?authorization=${auth}`,
+        dataType: "json",
+        async: false,
+        success: function (resp) {
+          $.ajax({
+            type: "GET",
+            url: site_add + `/register/getLineChart/Consultation?authorization=${auth}`,
+            dataType: "json",
+            async: false,
+            success: function (resp2) {
+              setLineChart(resp, resp2);
+            }
+          })
+
+        }
+      })
+    }
+
+    function getBarChart() {
+      $.ajax({
+        type: "GET",
+        url: site_add + `/doctor/getBarChart/Appointment?authorization=${auth}`,
+        dataType: "json",
+        async: false,
+        success: function (resp) {
+          $.ajax({
+            type: "GET",
+            url: site_add + `/doctor/getBarChart/Consultation?authorization=${auth}`,
+            dataType: "json",
+            async: false,
+            success: function (resp2) {
+              setBarChart(resp, resp2);
+            }
+          })
+
+        }
+      })
+    }
+
+    function getCanvasRadar() {
+      $.ajax({
+        type: "GET",
+        url: site_add + `/register/getCanvasRadar/Appointment?authorization=${auth}`,
+        dataType: "json",
+        async: false,
+        success: function (resp) {
+          $.ajax({
+            type: "GET",
+            url: site_add + `/register/getCanvasRadar/Consultation?authorization=${auth}`,
+            dataType: "json",
+            async: false,
+            success: function (resp2) {
+              setRadarChart(resp, resp2);
+            }
+          })
+
+        }
+      })
+    }
+
+    function getPieChart() {
+      $.ajax({
+        type: "GET",
+        url: site_add + `/doctor/getPieChart?authorization=${auth}`,
+        dataType: "json",
+        async: false,
+        success: function (resp) {
+          setPieChart(resp)
+        }
+      })
+    }
+    // Line chart
+    function setLineChart(resp, resp2) {
+      var data_tag = [];
+      var data_tag2 = [];
+      let i = 0;
+      let j = 0;
+      for (var key in resp) {
+        Month_tag[i] = getMonth(key);
+        data_tag[i] = resp[key];
+        i++;
+      }
+      i = 0;
+
+      for (var key in resp2) {
+        data_tag2[j] = resp2[key];
+        j++;
+      }
+      j = 0;
+
+      if ($('#lineChart').length) {
+        var ctx = document.getElementById("lineChart");
+        var lineChart = new Chart(ctx, {
+          type: 'line',
+          data: {
+            labels: Month_tag,
+            datasets: [{
+              label: 'Outpatient visits',
+              backgroundColor: "rgba(38, 185, 154, 0.31)",
+              borderColor: "rgba(38, 185, 154, 0.7)",
+              pointBorderColor: "rgba(38, 185, 154, 0.7)",
+              pointBackgroundColor: "rgba(38, 185, 154, 0.7)",
+              pointHoverBackgroundColor: "#fff",
+              pointHoverBorderColor: "rgba(220,220,220,1)",
+              pointBorderWidth: 1,
+              data: data_tag
+            }, {
+              label: "Online consultation visits",
+              backgroundColor: "rgba(3, 30, 106, 0.3)",
+              borderColor: "rgba(3, 20, 86, 0.70)",
+              pointBorderColor: "rgba(3, 88, 106, 0.70)",
+              pointBackgroundColor: "rgba(3, 30, 106, 0.70)",
+              pointHoverBackgroundColor: "#fff",
+              pointHoverBorderColor: "rgba(151,187,205,1)",
+              pointBorderWidth: 1,
+              data: data_tag2
+            }]
+          },
+          options: {
+            
+          }
+        });
+      }
+    }
+
+    // Bar chart
+    function setBarChart(resp, resp2) {
+      var data_tag = [];
+      var data_tag2 = [];
+      let i = 0;
+      let j = 0;
+      for (var key in resp) {
+        data_tag[i] = resp[key];
+        i++;
+      }
+      i = 0;
+
+      for (var key in resp2) {
+        data_tag2[j] = resp2[key];
+        j++;
+      }
+      j = 0;
+
+      if ($('#mybarChart').length) {
+        var ctx = document.getElementById("mybarChart");
+        var mybarChart = new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: Month_tag,
+            datasets: [{
+              label: 'Duty for appointment',
+              backgroundColor: "#26B99A",
+              data: data_tag,
+            }, {
+              label: 'Duty for consultation',
+              backgroundColor: "#03586A",
+              data: data_tag2
+            }]
+          },
+          options: {
+            scales: {
+              yAxes: [{
+                ticks: {
+                  beginAtZero: true
+                }
+              }]
+            }
+          }
+
+        });
+      }
+    }
+
+    // Radar chart
+    function setRadarChart(resp, resp2) {
+      var data_tag = [];
+      var data_tag2 = [];
+      let i = 0;
+      let j = 0;
+      for (var key in resp) {
+        Dep_tag[i] = key;
+        data_tag[i] = resp[key];
+        i++;
+      }
+      i = 0;
+
+      for (var key in resp2) {
+        data_tag2[j] = resp2[key];
+        j++;
+      }
+      j = 0;
+
+      if ($('#canvasRadar').length) {
+        var ctx = document.getElementById("canvasRadar");
+        var data = {
+          labels: Dep_tag,
+          datasets: [{
+            label: "Number of outpatients",
+            backgroundColor: "rgba(3, 88, 106, 0.2)",
+            borderColor: "rgba(3, 88, 106, 0.80)",
+            pointBorderColor: "rgba(3, 88, 106, 0.80)",
+            pointBackgroundColor: "rgba(3, 88, 106, 0.80)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            data: data_tag
+          }, {
+            label: "Number of online patients",
+            backgroundColor: "rgba(38, 185, 154, 0.2)",
+            borderColor: "rgba(38, 185, 154, 0.85)",
+            pointColor: "rgba(38, 185, 154, 0.85)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(151,187,205,1)",
+            data: data_tag2
+          }]
+        };
+
+        var canvasRadar = new Chart(ctx, {
+          type: 'radar',
+          data: data,
+        });
+      }
+    }
+
+    // pie chart
+    function setPieChart(resp) {
+      var data_tag = [];
+      var Dep_tag2 = [];
+      let i = 0;
+      for (var key in resp) {
+        Dep_tag2[i] = key;
+        data_tag[i] = resp[key];
+        i++;
+      }
+      i = 0;
+
+      if ($('#pieChart').length) {
+        var ctx = document.getElementById("pieChart");
+        var data = {
+          datasets: [{
+            data: data_tag,
+            backgroundColor: [
+              "#455C73",
+              "#9B59B6",
+              "#BDC3C7",
+              "#26B99A",
+              "#3498DB"
+            ],
+            label: 'My dataset' // for legend
+          }],
+          labels: Dep_tag2,
+        };
+
+        var pieChart = new Chart(ctx, {
+          data: data,
+          type: 'pie',
+          otpions: {
+            legend: false
+          }
+        });
+      }
+    }
+
+    function getMonth(MonthNum) {
+      if (MonthNum == "01")
+        return "January"
+      if (MonthNum == "02")
+        return "February"
+      if (MonthNum == "03")
+        return "March"
+      if (MonthNum == "04")
+        return "April"
+      if (MonthNum == "05")
+        return "May"
+      if (MonthNum == "06")
+        return "June"
+      if (MonthNum == "07")
+        return "July"
+      if (MonthNum == "08")
+        return "August"
+      if (MonthNum == "09")
+        return "September"
+      if (MonthNum == "10")
+        return "October"
+      if (MonthNum == "11")
+        return "November"
+      if (MonthNum == "12")
+        return "December"
+    }
+
+  </script>
+
+</body>
+
+</html>

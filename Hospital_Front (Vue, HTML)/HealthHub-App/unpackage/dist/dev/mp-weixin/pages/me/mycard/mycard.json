@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "mycard",
+  "navigationBarBackgroundColor": "#87CEFA",
+  "usingComponents": {
+    "u-input": "../../../uni_modules/diy-uview-ui/components/u-input/u-input",
+    "u-form-item": "../../../uni_modules/diy-uview-ui/components/u-form-item/u-form-item",
+    "u-checkbox": "../../../uni_modules/diy-uview-ui/components/u-checkbox/u-checkbox",
+    "u-checkbox-group": "../../../uni_modules/diy-uview-ui/components/u-checkbox-group/u-checkbox-group",
+    "u-calendar": "../../../uni_modules/diy-uview-ui/components/u-calendar/u-calendar"
+  }
+}

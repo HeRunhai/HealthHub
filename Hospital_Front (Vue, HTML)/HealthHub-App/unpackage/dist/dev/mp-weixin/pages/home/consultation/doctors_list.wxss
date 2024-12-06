@@ -1,0 +1,220 @@
+/**
+ * 修改common/diygw-ui/index.scss 可以取消相关组件样式
+ * 修改common/diygw-ui/iconfont.scss 如果发布APP可能会图标字体找不到的问题，加上https测试
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.flex20-clz.data-v-d294b228 {
+  padding-top: 2px;
+  box-shadow: 0px 1px 4px 2px rgba(31, 31, 31, 0.16);
+  overflow: visible;
+  left: 0px;
+  bottom: 0px;
+  padding-left: 2px;
+  padding-bottom: 2px;
+  padding-right: 2px;
+}
+.flex21-clz.data-v-d294b228 {
+  flex-shrink: 0;
+  width: 70px !important;
+}
+.icon1-clz.data-v-d294b228 {
+  color: #767272;
+}
+.icon1.data-v-d294b228 {
+  font-size: 32px;
+}
+.flex22-clz.data-v-d294b228 {
+  flex-shrink: 0;
+  width: 82px !important;
+}
+.text9-clz.data-v-d294b228 {
+  padding-top: 2px;
+  border-bottom-left-radius: 60px;
+  z-index: 1;
+  color: #ffffff;
+  padding-left: 3px;
+  font-size: 10rpx !important;
+  padding-bottom: 2px;
+  border-top-right-radius: 60px;
+  right: -5px;
+  background-color: #ff0000;
+  overflow: hidden;
+  top: -5px;
+  border-top-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+  position: absolute;
+  padding-right: 3px;
+}
+.icon2-clz.data-v-d294b228 {
+  color: #767272;
+}
+.icon2.data-v-d294b228 {
+  font-size: 32px;
+}
+.flex23-clz.data-v-d294b228 {
+  flex-shrink: 0;
+  width: 70px !important;
+}
+.icon-clz.data-v-d294b228 {
+  color: #767272;
+}
+.icon.data-v-d294b228 {
+  font-size: 32px;
+}
+.flex24-clz.data-v-d294b228 {
+  flex-shrink: 0;
+  width: 70px !important;
+}
+.icon4-clz.data-v-d294b228 {
+  color: #767272;
+}
+.icon4.data-v-d294b228 {
+  font-size: 32px;
+}
+.flex11-clz.data-v-d294b228 {
+  margin-left: 0px;
+  border: 1px dotted #eee;
+  width: 100% !important;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+}
+.flex12-clz.data-v-d294b228 {
+  border: 1px groove #eee;
+}
+.avatar-clz.data-v-d294b228 {
+  margin-left: 5px;
+  width: calc(25% - 5px - 5px) !important;
+  margin-top: 5px;
+  margin-bottom: 25px;
+  margin-right: 5px;
+}
+.text-clz.data-v-d294b228 {
+  margin-left: 5px;
+  font-weight: bold;
+  width: calc(95.8333333333% - 5px - 5px) !important;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: left;
+  margin-right: 5px;
+}
+.list-clz.data-v-d294b228 {
+  flex-shrink: 0;
+  padding-top: 5px;
+  padding-left: 5px;
+  width: 120px !important;
+  font-size: 10px !important;
+  padding-bottom: 5px;
+  height: 50px !important;
+  padding-right: 5px;
+}
+.list-item-clz .remark.data-v-d294b228 {
+  font-size: 10px;
+}
+.flex5-clz.data-v-d294b228 {
+  margin-left: 2px;
+  border: 1px none #eee;
+  width: calc(100% - 2px - 0px) !important;
+  margin-top: 4px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+}
+.text5-clz.data-v-d294b228 {
+  margin-left: 0px;
+  color: #888888;
+  width: calc(83.3333333333% - 0px - 0px) !important;
+  font-size: 11px !important;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 0px;
+}
+.text4-clz.data-v-d294b228 {
+  margin-left: 0px;
+  color: #888888;
+  width: calc(8.3333333333% - 0px - 0px) !important;
+  font-size: 11px !important;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 0px;
+}
+.flex15-clz.data-v-d294b228 {
+  margin-left: 40px;
+  width: calc(41.6666666667% - 40px - 0px) !important;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+  margin-right: 0px;
+}
+.button-clz.data-v-d294b228 {
+  text-align: center;
+}
+.button-button-clz.data-v-d294b228 {
+  font-size: 14px !important;
+  margin: 0px !important;
+}
+.text2-clz.data-v-d294b228 {
+  color: #ff000d;
+  text-align: center;
+}
+.flex19-clz.data-v-d294b228 {
+  margin-left: 2px;
+  border: 1px none #eee;
+  width: calc(100% - 2px - 0px) !important;
+  margin-top: 4px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+}
+.text13-clz.data-v-d294b228 {
+  margin-left: 0px;
+  color: #888888;
+  width: calc(83.3333333333% - 0px - 0px) !important;
+  font-size: 11px !important;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 0px;
+}
+.text8-clz.data-v-d294b228 {
+  margin-left: 0px;
+  color: #888888;
+  width: calc(8.3333333333% - 0px - 0px) !important;
+  font-size: 11px !important;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 0px;
+}
+.flex3-clz.data-v-d294b228 {
+  margin-left: 40px;
+  width: calc(41.6666666667% - 40px - 0px) !important;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+  margin-right: 0px;
+}
+.button1-clz.data-v-d294b228 {
+  text-align: center;
+}
+.button1-button-clz.data-v-d294b228 {
+  font-size: 14px !important;
+  margin: 0px !important;
+}
+.text15-clz.data-v-d294b228 {
+  color: #ff000d;
+  text-align: center;
+}
+.container18437.data-v-d294b228 {
+  padding-left: 0px;
+  padding-right: 0px;
+  font-size: 14px;
+}

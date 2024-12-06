@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            transform: scale(0.75);
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            height: 740px;
+            width: 900px;
+            border-radius: 4px;
+            border: 0.5px solid #e0e0e0;
+            background-color: #f5f5f5;
+            display: flex;
+            flex-flow: column;
+            overflow: hidden;
+        }
+
+        .title {
+            height: 50px;
+            width: 100%;
+            background-color: #5899ce;
+            line-height: 50px;
+            text-align: center;
+        }
+
+        .name {
+            margin-right: 24px;
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        .text {
+            margin-left: 210px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .content {
+            width: calc(100% - 40px);
+            padding: 10px;
+            overflow-y: scroll;
+            flex: 1;
+        }
+
+        .content:hover::-webkit-scrollbar-thumb {
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        .bubble {
+            max-width: 400px;
+            padding: 10px;
+            border-radius: 5px;
+            position: relative;
+            color: #000;
+            word-wrap: break-word;
+            word-break: normal;
+        }
+
+        .Pic_message {
+            max-width: 120px;
+            max-height: 120px;
+        }
+
+        .item-left .bubble {
+            margin-left: 15px;
+            background-color: #fff;
+        }
+
+        .item-left .bubble:before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-top: 10px solid transparent;
+            border-right: 10px solid #fff;
+            border-bottom: 10px solid transparent;
+            left: -20px;
+        }
+
+        .item-right .bubble {
+            margin-right: 15px;
+            background-color: #9eea6a;
+        }
+
+        .item-right .bubble:before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 10px solid #9eea6a;
+            border-top: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            right: -20px;
+        }
+
+        .item {
+            margin-top: 15px;
+            display: flex;
+            width: 100%;
+        }
+
+        .item.item-right {
+            justify-content: flex-end;
+        }
+
+        .item.item-center {
+            justify-content: center;
+        }
+
+        .item.item-center span {
+            font-size: 12px;
+            padding: 2px 4px;
+            color: #fff;
+            background-color: #dadada;
+            border-radius: 3px;
+            -moz-user-select: none;
+            /*火狐*/
+            -webkit-user-select: none;
+            /*webkit浏览器*/
+            -ms-user-select: none;
+            /*IE10*/
+            -khtml-user-select: none;
+            /*早期浏览器*/
+            user-select: none;
+        }
+
+        .avatar img {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+        }
+
+        .input-tool {
+            height: 30px;
+            display: flex;
+            flex-flow: row;
+            background-color: #fff;
+        }
+
+        .tool {
+            position: relative;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            padding-left: 10px;
+        }
+
+        .send {
+            position: relative;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+        }
+
+        .input-area {
+            border-top: 0.5px solid #e0e0e0;
+            height: 150px;
+            display: flex;
+            flex-flow: column;
+            background-color: #fff;
+        }
+
+        textarea {
+            flex: 1;
+            padding: 5px;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
+            overflow-y: auto;
+            overflow-x: hidden;
+            outline: none;
+            resize: none;
+        }
+
+        .button-area {
+            display: flex;
+            height: 40px;
+            margin-right: 10px;
+            line-height: 40px;
+            padding: 5px;
+            justify-content: flex-end;
+        }
+
+        .button-area button {
+            width: 80px;
+            border: none;
+            outline: none;
+            border-radius: 4px;
+            float: right;
+            cursor: pointer;
+        }
+
+        /* 设置滚动条的样式 */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        /* 滚动槽 */
+        ::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset006px rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+        }
+
+        /* 滚动条滑块 */
+        ::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0);
+            -webkit-box-shadow: inset006px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="title">
+            <!-- <img class="back" src="images/back.png"/> -->
+            <span class="name">Patient Name</span>
+            <div id="loading" style="position:absolute; left:175px; top:180px; width:227px; height:20px; z-index:1">
+                Loading.....</div>
+        </div>
+        <div class="content" id="messages">
+            <!-- <div class="item item-center"><span>Please communicate in a friendly manner and use civilized language</span></div> -->
+
+            <!-- <div class="item item-center"><span>昨天 13:15</span></div>
+            <div class="item item-left">
+                <div class="avatar"><img /></div>
+                <div class="bubble bubble-left">您好,我在武汉，你可以直接送过来吗，我有时间的话，可以自己过去拿<br />！！！<br />123</div>
+            </div>
+
+            <div class="item item-center"><span>昨天 13:15</span></div>
+            <div class="item item-right">
+                <div class="bubble bubble-right">hello<br />你好呀</div>
+                <div class="avatar"><img />
+                </div>
+            </div>
+            </div> -->
+        </div>
+        <div class="input-tool">
+            <img class="tool" src="../static/Icons/emoji.png" />
+            <img class="tool" src="../static/Icons/picture.png" />
+        </div>
+        <div class="input-area">
+            <textarea name="text" id="textarea" style="font-size: 20px;"></textarea>
+            <div class="button-area" onclick="send()">
+                <button style="background-color:rgb(203, 232, 245); border-radius: 5px;">
+                    <img class="send" id="send-btn" src="../static/Icons/send.png">
+                </button>
+            </div>
+        </div>
+
+    </div>
+    <script type="text/javascript" src="../lib/Global.js"></script>
+    <script type="text/javascript" src="../lib/jquery/3.4.1/jquery-3.4.1.js"></script>
+    <script>
+        var auth = sessionStorage.getItem('auth');
+        var dno = sessionStorage.getItem('dno');
+        var pno = sessionStorage.getItem('pno');
+        var pname = sessionStorage.getItem('pname');
+        var patient_avatar = sessionStorage.getItem('patient_avatar');
+        var doctor_avatar = sessionStorage.getItem('doctor_avatar');
+        var sendId = 0;
+        var lastSendTime = "";
+        var lastHistoryMsgTime = ""
+        $(".name").text(pname)
+
+        $(document).ready(function () {
+            getMessages(dno, pno);
+            var scrollBar = $(".content");
+            let height = document.querySelector('.content').scrollHeight;
+            document.querySelector(".content").scrollTop = height;
+            setInterval(UpdateMessages,100);
+        });
+
+        function getMessages(dno, pno) {
+            $.ajax({
+                type: "GET",
+                url: site_add + `/patient/getMessages/${dno}/${pno}/?authorization=${auth}`,
+                dataType: "json",
+                async: false,
+                success: function (resp) {
+                    resetUnreadMsgNum(dno, pno);
+                    $(".content").empty();
+                    var titleMsg = `<div class="item item-center"><span style='font-size: 16px;'>Please communicate in a friendly manner and use civilized language</span></div>`
+                    $("#messages").append(titleMsg);
+
+                    $.each(resp, function (i, n) {
+                        Insert_History_Message(i, n)
+                    })
+                    document.getElementById('loading').style.visibility = 'hidden';
+                }
+            });
+        }
+
+        function resetUnreadMsgNum(dno, pno) {
+            $.ajax({
+                type: "POST",
+                url: site_add + `/patient/readAllMsg/${dno}/${pno}/?authorization=${auth}`,
+                dataType: "text",
+                async: false,
+                success: function (resp) {
+                    console.log("Get into chat, read all messages")
+                }
+            })
+        }
+
+        function Insert_History_Message(i, n) {
+            var message_time = `<div class="item item-center"><span id="time${i}">13:00</span></div>`
+            var patient_text_message = `<div class="item item-left"><div class="avatar"><img id="Pavatar${i}"/></div><div class="bubble bubble-left"><span id="patient_message${i}">Hello, there!</span></div></div>`
+            var doctor_message = `<div class="item item-right"><div class="bubble bubble-right" id="doctor_message"><span id="doctor_message${i}">Hello</span></div><div class="avatar"><img id="Davatar${i}"/></div></div>`
+            var patient_picture_message = `<div class="item item-left"><div class="avatar"><img id="Pavatar${i}"/></div><div class="bubble bubble-left"><img id="patient_message${i}" class="Pic_message"/></div></div>`;
+
+            var length = n.sendTime.length
+            var currentHistoryMsgTime = n.sendTime.slice(0, 16)
+            var TimeToShow = "";
+            if (currentHistoryMsgTimeInAMinute(currentHistoryMsgTime) == false) {
+                var TimeDate = currentHistoryMsgTime.substring(0, 10)
+                var TimeToShowInToday = currentHistoryMsgTime.substring(length - 9, length)
+                if (checkIfToday(TimeDate) == true) {
+                    TimeToShow = TimeToShowInToday
+                } else {
+                    TimeToShow = currentHistoryMsgTime
+                }
+                var messageTime = "time" + i
+                $("#messages").append(message_time);
+                $("#" + messageTime).text(TimeToShow)
+                lastHistoryMsgTime = currentHistoryMsgTime
+            }
+
+            if (n.senderRole == "patient") {
+                var patient_message = "patient_message" + i
+
+                if (n.type == "text") {
+                    $("#messages").append(patient_text_message);
+                    $("#" + patient_message).text(n.content);
+                } else if (n.type == "picture") {
+                    $("#messages").append(patient_picture_message);
+                    $("#" + patient_message).attr("src", "../" + n.content);
+                }
+
+                var patientAvatar = "Pavatar" + i
+                $("#" + patientAvatar).attr("src", "../" + patient_avatar)
+            } else if (n.senderRole == "doctor") {
+                $("#messages").append(doctor_message);
+                var doctor_message = "doctor_message" + i
+                $("#" + doctor_message).text(n.content);
+                var doctorAvatar = "Davatar" + i
+                $("#" + doctorAvatar).attr("src", ".." + doctor_avatar)
+            }
+        }
+
+        function send() {
+            sendId++;
+            let text = document.querySelector('#textarea').value;
+            if (!text) {
+                alert('Please input message content');
+                return;
+            }
+
+            var content = text;
+            var type = "text";
+            var timeToStore = getNowTime()
+
+            if (SendWithinAMinute() == false) {
+                var timeToShow = timeToStore.slice(11, 16)
+                var message_time = `<div class="item item-center"><span id="sendTime${sendId}">${timeToShow}</span></div>`
+                var sendTime = "sendTime" + sendId
+                $("#messages").append(message_time);
+                lastSendTime = timeToStore.slice(0, 16);
+            }
+
+            var doctor_message = `<div class="item item-right"><div class="bubble bubble-right" id="doctor_message"><span id="sendMessage${sendId}">${text}</span></div><div class="avatar"><img id="sendAvatar${sendId}"/></div></div>`
+            $("#messages").append(doctor_message);
+            var sendAvatar = "sendAvatar" + sendId
+            $("#" + sendAvatar).attr("src", ".." + doctor_avatar)
+
+            document.querySelector('#textarea').value = '';
+            document.querySelector('#textarea').focus();
+            //滚动条置底
+            let height = document.querySelector('.content').scrollHeight;
+            document.querySelector(".content").scrollTop = height;
+
+            StoreMessage("doctor", dno, pno, content, type, timeToStore);
+        }
+
+        function currentHistoryMsgTimeInAMinute(currentHistoryMsgTime) {
+            if (currentHistoryMsgTime != lastHistoryMsgTime || lastHistoryMsgTime == "") {
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+        function checkIfToday(currentMessageDate) {
+            var myDate = new Date;
+            var year = myDate.getFullYear();
+            var mon = formatNumber(myDate.getMonth() + 1);
+            var date = formatNumber(myDate.getDate());
+            var now = year + "-" + mon + "-" + date
+            if (now == currentMessageDate)
+                return true;
+            return false;
+        }
+
+        function SendWithinAMinute() {
+            var myDate = new Date;
+            var year = myDate.getFullYear();
+            var mon = formatNumber(myDate.getMonth() + 1);
+            var date = formatNumber(myDate.getDate());
+            var hour = formatNumber(myDate.getHours());
+            var minute = formatNumber(myDate.getMinutes());
+            var now = year + "-" + mon + "-" + date + " " + hour + ":" + minute
+            if (now != lastSendTime && now != lastHistoryMsgTime) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+        function formatNumber(n) {
+            n = n.toString();
+            return n[1] ? n : '0' + n;
+        }
+
+        function getNowTime() {
+            var myDate = new Date();
+            var year = myDate.getFullYear();
+            var mon = formatNumber(myDate.getMonth() + 1);
+            var date = formatNumber(myDate.getDate());
+            var hour = formatNumber(myDate.getHours());
+            var minute = formatNumber(myDate.getMinutes());
+            var second = formatNumber(myDate.getSeconds());
+            var now = year + '-' + mon + '-' + date + ' ' + hour + ':' + minute + ':' + second;
+            return now;
+        }
+
+        function StoreMessage(senderRole, sendUserId, receiveUserId, content, type, sendTime) {
+            $.ajax({
+                type: "POST",
+                url: site_add + `/patient/sendMessage/${senderRole}/${sendUserId}/${receiveUserId}/${content}/${type}/${sendTime}/?authorization=${auth}`,
+                dataType: "json",
+                async: false,
+                success: function (resp) {
+
+                }
+            })
+        }
+
+        function UpdateMessages() {
+            $.ajax({
+                type: "GET",
+                url: site_add + `/patient/getMessages/${dno}/${pno}/?authorization=${auth}`,
+                dataType: "json",
+                async: false,
+                success: function (resp) {
+                    $(".content").empty();
+                    $.each(resp, function (i, n) {
+                        Insert_History_Message(i, n)
+                    })
+                }
+            })
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "doctor page",
+  "navigationBarBackgroundColor": "#87CEFA",
+  "usingComponents": {
+    "u-input": "../../../uni_modules/diy-uview-ui/components/u-input/u-input",
+    "u-form-item": "../../../uni_modules/diy-uview-ui/components/u-form-item/u-form-item",
+    "u-calendar": "../../../uni_modules/diy-uview-ui/components/u-calendar/u-calendar",
+    "u-form": "../../../uni_modules/diy-uview-ui/components/u-form/u-form"
+  }
+}

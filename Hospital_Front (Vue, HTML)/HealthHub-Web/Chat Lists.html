@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>HealthHub</title>
+    <style>
+        .scroll_move {
+            overflow-y: scroll;
+        }
+
+        .icon_btn {
+            width: 100%;
+            height: 100%;
+            max-width: 30px;
+            max-height: 30px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-bottom: 3px;
+        }
+
+        .icon_btn2 {
+            width: 100%;
+            height: 100%;
+            max-width: 25px;
+            max-height: 25px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-bottom: 3px;
+        }
+
+        .select {
+            width: 120px;
+            height: 27px;
+            padding-top: 3px;
+        }
+
+        /* 弹窗样式 */
+        #overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+            overflow-y: scroll;
+        }
+
+        #modal {
+            border-radius:10px;
+            position: fixed;
+            display: flex;
+            top: 50%;
+            left: 60%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 15px;
+        }
+
+        .pop_left {
+            flex: 1;
+            background-color: #f2f2f2;
+        }
+
+        .pop_right {
+            flex: 1;
+            background-color: #f2f2f2;
+        }
+
+        .patient-info{
+            margin-top: 15px;
+            margin-bottom: 30px;
+            padding-top: 10px;
+            margin-right: 40px;
+            height: 555px;
+            width: 200px;
+            border-radius: 4px;
+            border: 0.5px solid #e0e0e0;
+            background-color: #ADD8E6;
+            display: flex;
+            flex-flow: column;
+            overflow: hidden;
+        }
+
+        .details{
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .info{
+            padding-top: 5px;
+            padding-left: 10px;
+        }
+
+        .info p{
+            line-height: 0.8;
+        }
+
+        textarea:focus{
+            color: #D3D3D3;
+        }
+
+        .exit{
+            text-align: center;
+            padding-top: 10px;
+            height: 20px;
+            line-height: 20px;
+        }
+
+    </style>
+
+    <!-- Bootstrap -->
+    <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- bootstrap-progressbar -->
+    <link href="vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    <!-- bootstrap-daterangepicker -->
+    <link href="vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/Title.css" type="text/css">
+    <script src="js/myJavaScript.js" type="text/javascript"></script>
+    <!-- Custom Theme Style -->
+    <link href="build/css/custom.min.css" rel="stylesheet">
+</head>
+
+<body class="nav-md">
+    <div class="container body">
+        <div class="main_container">
+
+            <!-- Template Section-->
+            <div class="Template">
+                <div class="col-md-3 left_col">
+                    <div class="left_col scroll-view">
+                        <div class="navbar nav_title" style="border: 0;">
+                            <a href="index.html" class="site_title"><img src="static/Icons/Logo-White.png"
+                                    style="width: 75px; height: 75px; object-fit: cover;"></img><span>HealthHub</span></a>
+                        </div>
+                        <div class="clearfix"></div>
+                        <!-- menu profile quick info -->
+                        <div class="profile clearfix">
+                            <div class="profile_pic">
+                                <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+                            </div>
+                            <div class="profile_info">
+                                <span>Welcome,Doctor</span>
+                                <h2 id="Dname"></h2>
+                            </div>
+                        </div>
+                        <!-- /menu profile quick info -->
+
+                        <br />
+
+                        <!-- sidebar menu -->
+                        <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                            <div class="menu_section">
+                                <h3>General</h3>
+                                <ul class="nav side-menu">
+                                    <li><a><i class="fa fa-home"></i> OutPatients <span
+                                                class="fa fa-chevron-down"></span></a>
+                                        <ul class="nav child_menu">
+                                            <li><a href="index.html">Waiting</a></li>
+                                            <li><a href="Diagnosis.html">Diagnosing</a></li>
+                                            <li><a href="Records.html">Records</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a><i class="fa fa-desktop"></i> Consultations <span
+                                                class="fa fa-chevron-down"></span></a>
+                                        <ul class="nav child_menu">
+                                            <li><a href="Chat Lists.html">Chat Lists</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a><i class="fa fa-edit"></i> Medicine Management <span
+                                                class="fa fa-chevron-down"></span></a>
+                                        <ul class="nav child_menu">
+                                            <li><a href="Medicine_Room.html">Medicine room</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a><i class="fa fa-bar-chart-o"></i> Patient hospitalization <span
+                                                class="fa fa-chevron-down"></span></a>
+                                        <ul class="nav child_menu">
+                                            <li><a href="Hospitalizations.html">Hospitalization</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a><i class="fa fa-table"></i> Work Schedule <span
+                                                class="fa fa-chevron-down"></span></a>
+                                        <ul class="nav child_menu">
+                                            <li><a href="Schedule.html">Schedule</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a><i class="fa fa-clone"></i>Self Information<span
+                                                class="fa fa-chevron-down"></span></a>
+                                        <ul class="nav child_menu">
+                                            <li><a href="Account Management.html">Account Management</a></li>
+                                            <li><a href="Edit personal information.html">Edit personal
+                                                    information</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- /sidebar menu -->
+
+                        <!-- /menu footer buttons -->
+                        <div class="sidebar-footer hidden-small">
+                            <a data-toggle="tooltip" data-placement="top" title="Settings">
+                                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                            </a>
+                            <a data-toggle="tooltip" data-placement="top" title="FullScreen" id="full-screen-btn"
+                                onclick="Fullscreen()">
+                                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+                            </a>
+                            <a data-toggle="tooltip" data-placement="top" title="Lock">
+                                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+                            </a>
+                            <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
+                                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+                            </a>
+                        </div>
+                        <!-- /menu footer buttons -->
+                    </div>
+                </div>
+
+                <!-- top navigation -->
+                <div class="top_nav">
+                    <div class="nav_menu">
+                        <div class="nav toggle">
+                            <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                        </div>
+                        <nav class="nav navbar-nav">
+                            <ul class=" navbar-right">
+                                <li class="nav-item dropdown open" style="padding-left: 15px;">
+                                    <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true"
+                                        id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
+                                        <img src="images/img.jpg" alt=""><span id="Dname2"></span>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-usermenu pull-right"
+                                        aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="Edit personal information.html"> Profile</a>
+                                        <a class="dropdown-item" href="Account Management.html">
+                                            <span class="badge bg-red pull-right">Account</span>
+                                            <span>Settings</span>
+                                        </a>
+                                        <a class="dropdown-item" href="Help.html">Help</a>
+                                        <a class="dropdown-item" href="login.html"><i
+                                                class="fa fa-sign-out pull-right"></i>Log
+                                            Out</a>
+                                    </div>
+                                </li>
+
+                                <li role="presentation" class="nav-item dropdown open">
+                                    <a href="javascript:;" class="dropdown-toggle info-number" id="navbarDropdown1"
+                                        data-toggle="dropdown" aria-expanded="false">
+                                        <i class="fa fa-envelope-o"></i>
+                                        <span class="badge bg-green">1</span>
+                                    </a>
+                                    <ul class="dropdown-menu list-unstyled msg_list" role="menu"
+                                        aria-labelledby="navbarDropdown1">
+                                        <li class="nav-item">
+                                            <a class="dropdown-item">
+                                                <span class="image"><img src="images/img.jpg"
+                                                        alt="Profile Image" /></span>
+                                                <span>
+                                                    <span id="Dname2">John Smith</span>
+                                                    <span class="time">3 mins ago</span>
+                                                </span>
+                                                <span class="message">
+                                                    Film festivals used to be do-or-die moments for movie makers. They
+                                                    were
+                                                    where...
+                                                </span>
+                                            </a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <div class="text-center">
+                                                <a class="dropdown-item">
+                                                    <strong>See All Alerts</strong>
+                                                    <i class="fa fa-angle-right"></i>
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <!-- /top navigation -->
+
+            </div>
+            <!-- /Template Section-->
+
+            <!-- My page-->
+            <div class="right_col" role="main" id="mypage">
+                <div align="center">
+                    <h1 id="department">Department Name</h1>
+                </div>
+                <div>
+                    <div class="top">
+                        <h2>Query</h2>
+                    </div>
+
+                    <div class="main">
+                        <div>
+                            <select id="s" class="select">
+                                <option selected>No.</option>
+                                <option>Patient Name</option>
+                        </div>
+                        <input id="search" class="inp" type="text" placeholder="Search for..." />
+                        <img src="static/Icons/query.png" class="icon_btn2" id="query" onclick="search()" />
+                        <img id="refresh" align="right" class="icon_btn" src="static/Icons/refresh.png"
+                            title="Refresh data" type='submit' />
+                    </div>
+
+                    <div id="overlay">
+                        <div id="modal">
+                            <div class="pop_left">
+                            <!-- <iframe src="./sub_pages/ChatPage.html" style="border: none;" width="600" height="570"></iframe> -->
+                            </div>
+
+                            <div class="pop_right">
+                                <div class="patient-info">
+                                    <div style="display: flex; justify-content: center; align-items: center;">
+                                    <img class="avatar" style="width: 80px;height: 80px; border-radius: 50%;" src="images/user.png">
+                                    </div>
+                                    <h2 align="center" class="name">John Doe</h2>
+                                    <div class="details">
+                                    <div class="info">
+                                        <p style="padding-left: 5px;">Gender: <span class="gender">Male</span></p>
+                                        <p style="padding-left: 5px;">Age: <span class="age">30</span></p>
+                                        <p style="padding-left: 5px;">Address: <span class="address">.....</span></p>
+                                        <p style="padding-left: 5px;">Phone: <span class="phone">.....</span></p>
+                                        <p style="padding-left: 5px;">Diagnosis note:<span class="note">.....</span></p></p>
+                                    </div>
+                                        <textarea class="note" style="width: 100%; color: black; background-color: #F0F8FF; border-radius: 5px; border-color: #D3D3D3;" rows="10"></textarea>
+                                    </div>
+
+                                    <div class="exit">
+                                    <input type="button" value="Exit" onclick="exit()" style="width: 180px;background-color: #F0F8FF; border-radius: 5px; border-color: #D3D3D3;" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div style="max-height: 600px; overflow-y: scroll">
+                            <table id="table1" cellspacing="0px">
+                                <thead>
+                                    <tr class="tableTitle" align="center">
+                                        <td class="col1">No.</td>
+                                        <td class="col2">Patient Name</td>
+                                        <td class="col3">Gender</td>
+                                        <td class="col4">Age</td>
+                                        <td class="col5">Status</td>
+                                        <td class="col5" style="color: rgb(214, 91, 91);">Duration for appointment</td>
+                                        <td class="col5">Latest message</td>
+                                        <td class="col6">Latest send time</td>
+                                        <td class="col7" style="color: rgb(214, 91, 91);">Num of unread messages</td>
+                                        <td class="col8">Operation</td>
+                                    </tr>
+                                </thead>
+                                <tbody id="PatientsInfo">
+                                    <!--Here data from controller and set by script-->
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="lowerLbl" align="center">
+                            <p>Total</p>
+                            <p id="Total_PageNum">0</p>
+                            <p>Pages</p>
+                            <button onclick="last()"><</button>
+                            <button id="page" style="background-color: #5899ce; color: white" value="1" disabled>1</button>
+                            <button onclick="next()">></button>
+                            &nbsp;
+                            <p>Go to Page</p>
+                            <input type="text" id="goPage"/>
+                            <img src="static/Icons/next-button.png" onclick="goPage()" title="Go page" style=" max-width: 22px;max-height: 22px; padding-bottom: 3px; padding-left: 2px;"/>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- /My page-->
+    </div>
+    </div>
+
+    <script type="text/javascript" src="lib/Global.js"></script>
+    <script type="text/javascript" src="js/myJavaScript.js"></script>
+    <script type="text/javascript" src="lib/jquery/3.4.1/jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        var pageSize = 5;
+        var total_pageNum = 0;
+        var account = sessionStorage.getItem('account');
+        var auth = sessionStorage.getItem('auth');
+        var dno = sessionStorage.getItem('dno');
+        var dname = sessionStorage.getItem('doctor_name');
+        var department = sessionStorage.getItem('department');
+        var Latest_message = '';
+        var Latest_send_time = '';
+        var Num_unread = 0;
+        var targetElement;
+
+        $(document).ready(function () {
+            if (account === null || auth === null) {
+                alert("please login first");
+                window.location.href = "login.html";
+            }
+            getDoctorInfo();
+            set_total_pageNum();
+            getConsultations();
+            setInterval(getConsultations,3000);
+        });
+
+        //点击按钮再次执行ajax，刷新数据
+        $("#refresh").click(function () {
+            alert("Fresh data successfully")
+            getConsultations();
+        })
+
+        function getDoctorInfo() {
+            $("#Dname").html(dname);
+            $("#Dname2").html(dname);
+            $("#department").html(department + " consultations");
+        }
+        
+        function set_total_pageNum() {
+            $.ajax({
+                type: "GET",
+                url: site_add + `/register/GetTodayAllConsultations/${department}/${this.dno}?authorization=${auth}`,
+                dataType: "json",
+                success: function (resp) {
+                    if (resp.length / pageSize > parseInt((resp.length / pageSize)))
+                        total_pageNum = parseInt((resp.length / pageSize)) + 1;
+                    else
+                        total_pageNum = resp.length / pageSize;
+                    $("#Total_PageNum").html(total_pageNum);
+                },
+                error: function (resp) {
+                    alert("Failed to set total page");
+                }
+            })
+        }
+
+        function getConsultations() {
+            $("#page").html(1);
+            let pageStart = parseInt($("#page").attr("value")) - 1
+            let pageEnd = parseInt($("#page").attr("value")) * pageSize - 1
+            $.ajax({
+                type: "GET",
+                url: site_add + `/register/GetTodayConsultations/${this.department}/${this.dno}/${pageStart}/${pageEnd}?authorization=${auth}`,
+                dataType: "json",
+                async: false,
+                success: function (resp) {
+                
+                    $("#PatientsInfo").empty();
+                    $.each(resp, function (i, n) {
+                        var currentPno = n.pno;
+                        getLatestMessage(dno, n.pno)
+                        getUnreadMessage(dno, n.pno)
+
+                        $("#PatientsInfo").append("<tr>" +
+                            "<td align='center'>" + n.rno + "</td>" +
+                            "<td align='center'>" + n.pname + "</td>" +
+                            "<td align='center'>" + n.pgender + "</td>" +
+                            "<td align='center'>" + n.page + "</td>" +
+                            "<td align='center'>" + n.status + "</td>" +
+                            "<td align='center' style='color: rgb(214, 91, 91);'>" + n.time.slice(10, 24) + "</td>" +
+                            "<td align='center' style='max-width: 60px;'>" + Latest_message + "</td>" +
+                            "<td align='center'>" + Latest_send_time + "</td>" +
+                            "<td align='center' style='color: rgb(214, 91, 91); font-weight:700'>" + Num_unread  +  "</td>" +
+                            "<td style=\"width:152px\"><input type=\"button\" style='width: 50px;' value=\"Reply\" onclick=\"reply(this)\" class=\"operation_btn1\">" +
+                            "<input type=\"button\" value=\"Finish\" onclick=\"finish(this)\" class=\"operation_btn3\"></td>" +
+                            "</tr>")
+                    })
+                }
+            })
+        }
+
+        function getUnreadMessage(dno, currentPno){
+            $.ajax({
+                type: "GET",
+                url: site_add + `/patient/getUnreadMsg/${dno}/${currentPno}?authorization=${auth}`,
+                dataType: "text",
+                async: false,
+                success: function (resp) {
+                    Num_unread = resp
+                }
+            })
+        }
+
+        function getLatestMessage(dno, currentPno) {
+            $.ajax({
+                type: "GET",
+                url: site_add + `/patient/getLatestMessage/${dno}/${currentPno}?authorization=${auth}`,
+                dataType: "json",
+                async: false,
+                success: function (resp) {
+                    if(resp.type == "picture"){
+                        Latest_message = "[picture]"
+                    }else{
+                        Latest_message = resp.content
+                    }
+
+                    if(Latest_message.length > 11)
+                    Latest_message = Latest_message.substring(0,9)+"..."
+                    Latest_send_time = resp.sendTime.slice(11,16)
+                    sessionStorage.setItem("Latest_send_time",resp.sendTime.slice(0,16))
+                },
+                error: function (resp) {
+                    Latest_message = ""
+                    Latest_send_time = ""
+                    Num_unread = 0
+                }
+            })
+        }
+
+        function reply(obj) {
+            targetElement = $('.pop_left');
+            var iframe = $('<iframe></iframe>', {
+                src: './sub_pages/ChatPage.html',
+                style: "border: none;",
+                width: "600",
+                height: "570"
+            });
+            targetElement.append(iframe);
+
+            var overlay = document.getElementById('overlay');
+            overlay.style.display = 'block';
+            var rno = $(obj).parent('td').parent('tr').children('td').eq(0).html();
+            $(".name").text($(obj).parent('td').parent('tr').children('td').eq(1).html())
+            sessionStorage.setItem("pname",$(obj).parent('td').parent('tr').children('td').eq(1).html())
+            $(".gender").text($(obj).parent('td').parent('tr').children('td').eq(2).html())
+            $(".age").text($(obj).parent('td').parent('tr').children('td').eq(3).html())
+            getPatientForChat(rno);
+        }
+
+        function getPatientForChat(rno){
+            $.ajax({
+                type: "GET",
+                url: site_add + `/register/${rno}/?authorization=${auth}`,
+                dataType: "json",
+                async: false,
+                success: function (resp) {
+                    sessionStorage.setItem('pno', resp.pno);
+                    $(".note").text(resp.diagnosisDescription);
+                    getPatient(resp.pno);
+                }
+            })
+        }
+
+        function getPatient(pno){
+            $.ajax({
+                type: "GET",
+                url: site_add + `/patient/get_patient/${pno}/?authorization=${auth}`,
+                dataType: "json",
+                async: false,
+                success: function (resp) {
+                    $(".avatar").attr("src", resp.avatar)
+                    sessionStorage.setItem("patient_avatar", resp.avatar);
+                    $(".address").text(resp.address)
+                    $(".phone").text(resp.phone)
+                }
+            })
+        }
+
+        function exit(){
+            var overlay = document.getElementById('overlay');
+            overlay.style.display = 'none';
+            targetElement.empty();
+            getConsultations();
+        }
+
+        function last() {
+            if (parseInt($("#page").attr("value")) != 1) {
+                let pageStart = parseInt($("#page").attr("value") - 2) * pageSize
+                let pageEnd = parseInt($("#page").attr("value") - 1) * pageSize - 1
+
+                $.ajax({
+                    type: "GET",
+                    url: site_add + `/register/getRecords/${this.department}/${this.dno}/${pageStart}/${pageEnd}?authorization=${auth}`,
+                    dataType: "json",
+                    success: function (resp) {
+                        $("#page").attr("value", parseInt($("#page").attr("value")) - 1)
+                        $("#page").html($("#page").attr("value"));
+
+                        $("#PatientsInfo").empty();
+                        $.each(resp, function (i, n) {
+                            $("#PatientsInfo").append("<tr>" +
+                                "<td align='center'>" + n.rno + "</td>" +
+                                "<td align='center'>" + n.pname + "</td>" +
+                                "<td align='center'>" + n.pgender + "</td>" +
+                                "<td align='center'>" + n.page + "</td>" +
+                                "<td align='center'>" + n.type + "</td>" +
+                                "<td align='center'>" + n.finishTime + "</td>" +
+                                "<td align='center'>" + n.status + "</td>" +
+                                "<td align='center' style='width:110px;'><input type=\"button\" value=\"Reply\" onclick=\"getResult(this)\" class=\"operation_btn\"></td>" +
+                                "</tr>")
+                        })
+                    }
+                })
+            } else {
+                alert("This is the first page")
+            }
+        }
+
+        function next() {
+            if (parseInt($("#Total_PageNum").html()) != parseInt($("#page").attr("value"))) {
+                let pageStart = parseInt($("#page").attr("value")) * pageSize
+                let pageEnd = parseInt($("#page").attr("value") + 1) * pageSize - 1
+
+                $.ajax({
+                    url: site_add + `/register/getRecords/${this.department}/${this.dno}/${pageStart}/${pageEnd}?authorization=${auth}`,
+                    dataType: "json",
+                    success: function (resp) {
+                        $("#page").attr("value", parseInt($("#page").attr("value")) + 1)
+                        $("#page").html($("#page").attr("value"));
+
+                        $("#PatientsInfo").empty();
+                        $.each(resp, function (i, n) {
+                            $("#PatientsInfo").append("<tr>" +
+                                "<td align='center'>" + n.rno + "</td>" +
+                                "<td align='center'>" + n.pname + "</td>" +
+                                "<td align='center'>" + n.pgender + "</td>" +
+                                "<td align='center'>" + n.page + "</td>" +
+                                "<td align='center'>" + n.type + "</td>" +
+                                "<td align='center'>" + n.finishTime + "</td>" +
+                                "<td align='center'>" + n.status + "</td>" +
+                                "<td align='center' style='width:110px;'><input type=\"button\" value=\"Reply\" onclick=\"getResult(this)\" class=\"operation_btn\"></td>" +
+                                "</tr>")
+                        })
+                    }
+                })
+            } else {
+                alert("This is the last page")
+            }
+        }
+
+        function goPage() {
+            if ($("#goPage").val() === "") {
+                alert("Please enter a page number first")
+            } else {
+                if (parseInt($("#Total_PageNum").html()) >= parseInt($("#goPage").val())) {
+                    let pageStart = parseInt($("#page").attr("value") - 1) * pageSize
+                    let pageEnd = parseInt($("#page").attr("value")) * pageSize - 1
+
+                    $.ajax({
+                        url: site_add + `/register/getRecords/${this.department}/${this.dno}/${pageStart}/${pageEnd}?authorization=${auth}`,
+                        dataType: "json",
+                        success: function (resp) {
+                            $("#page").attr("value", parseInt($("#goPage").val()))
+                            $("#page").html($("#page").attr("value"));
+
+                            $("#PatientsInfo").empty();
+                            $.each(resp, function (i, n) {
+                                $("#PatientsInfo").append("<tr>" +
+                                    "<td align='center'>" + n.rno + "</td>" +
+                                    "<td align='center'>" + n.pname + "</td>" +
+                                    "<td align='center'>" + n.pgender + "</td>" +
+                                    "<td align='center'>" + n.page + "</td>" +
+                                    "<td align='center'>" + n.type + "</td>" +
+                                    "<td align='center'>" + n.finishTime + "</td>" +
+                                    "<td align='center'>" + n.status + "</td>" +
+                                    "<td align='center' style='width:110px;'><input type=\"button\" value=\"Reply\" onclick=\"getResult(this)\" class=\"operation_btn\"></td>" +
+                                    "</tr>")
+                            })
+                        }
+                    })
+                } else {
+                    alert("The page number you specified is greater than the maximum page number")
+                }
+            }
+        }
+    </script>
+
+    <!-- jQuery -->
+    <script src="vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- FastClick -->
+    <script src="vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="vendors/nprogress/nprogress.js"></script>
+    <!-- Chart.js -->
+    <script src="vendors/Chart.js/dist/Chart.min.js"></script>
+    <!-- jQuery Sparklines -->
+    <script src="vendors/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+    <!-- morris.js -->
+    <script src="vendors/raphael/raphael.min.js"></script>
+    <script src="vendors/morris.js/morris.min.js"></script>
+    <!-- gauge.js -->
+    <script src="vendors/gauge.js/dist/gauge.min.js"></script>
+    <!-- bootstrap-progressbar -->
+    <script src="vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <!-- Skycons -->
+    <script src="vendors/skycons/skycons.js"></script>
+    <!-- Flot -->
+    <script src="vendors/Flot/jquery.flot.js"></script>
+    <script src="vendors/Flot/jquery.flot.pie.js"></script>
+    <script src="vendors/Flot/jquery.flot.time.js"></script>
+    <script src="vendors/Flot/jquery.flot.stack.js"></script>
+    <script src="vendors/Flot/jquery.flot.resize.js"></script>
+    <!-- Flot plugins -->
+    <script src="vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+    <script src="vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+    <script src="vendors/flot.curvedlines/curvedLines.js"></script>
+    <!-- DateJS -->
+    <script src="vendors/DateJS/build/date.js"></script>
+    <!-- bootstrap-daterangepicker -->
+    <script src="vendors/moment/min/moment.min.js"></script>
+    <script src="vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+    <!-- Custom Theme Scripts -->
+    <script src="build/js/custom.min.js"></script>
+
+</body>
+
+</html>

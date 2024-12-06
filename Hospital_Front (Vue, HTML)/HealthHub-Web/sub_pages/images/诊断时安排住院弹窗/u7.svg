@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="87px" height="70px" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <mask fill="white" id="clip1">
+      <path d="M 616 459  C 610.45 459  606 454.55  606 449  L 606 399  C 606 393.45  610.45 389  616 389  L 683 389  C 688.55 389  693 393.45  693 399  L 693 449  C 693 454.55  688.55 459  683 459  " fill-rule="evenodd" />
+    </mask>
+  </defs>
+  <g transform="matrix(1 0 0 1 -606 -389 )">
+    <image preserveAspectRatio="none" style="overflow:visible" width="87" height="70" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAD60lEQVR4nO2aT4iVVRyGn7lalotSaeGqRckYVBpIvApFSIhBaARhlEUkUthIVARFfwwD25QRRBKziKIpKkgIN7UwUCv4QVCQWYgSoi4qM0msdBptcT4Gus61ud95z/cN6LO98z33d957znzn3wANEhELgRXAEuBaYC4wAxgDfgW+B3YCWyXtbqKmgdJfEBEDwF3AU8CiPh7dAWyQtLNIYRVFA4iI+cDbwOIMzbvAkKTjlqK6KBZARKwiNf5Sg24vcJuknwyu/9BxCwEiYh3wIZ7GAwwCuyJinsk3jr0HRMR9pG5bgn2AJB11Ca09ICIWAMNOZxfzSMPKhi2AiJgOvIOv2/diRUTc65I5e8DDwA1G37nYHBGWoC0BRMQM4DmHa5LMBdY6RK4esIpUVJOsryZZWbgCuN/k6YdB4MZcSXYAEXEZsDTXU5OVuQJHD1gCTDd46nBTrsARwAKDoy4LcwWOAK42OOoyKyIuzxE4AsgqwMDsnIcdAZSe+f0fWW1wBHDM4MhhNOdhRwAnDY4csjZKHAHYlqY1GANO5AgcAewzOOpyQFLrQ6DNAPbmChwBfE3mP6IMvsoVZAcg6QTwZa6nJp/lClyrwfdMnn7YT+p9WbgCeJ/m5wNvSDqdK7EEIOlPYJPDNUkOA286RM49wddp7o3wpKS/HCJbAJJOAmuAMy5nDz6R9IFLZj0XkLQLeNnp7OIIaffZRomjseeBbwt4AdZI+tkptAcg6RSwGvjbrB6WtM3sLHM4KmkP6T6Ai/3AE0bfOEUCqNgC/GhyPV3NOO0UC0DSP3je1YeBrQbPhJTsAQCfGxw7HDO+XpQO4HeD44jB0ZPSAVxlcAwaHD0pHcCDBsetEXGlwTMhxQKIiOXAAwbVRcBwREwzuM6i1CWppcBH+O4gLQdGIuJik28c6yWp6prMM8AGoMQv9g2wWtIPLqEtgIhYBrwKXOdy9uAU8BqwSdIfubLsACJiEHiFdAe4SX4hXct5S9JYXUntACJiNvACMER79wMAvgMek1Rr0tV3ANU4f4TU+Dl1vrQQ20g7RX2dFfQVQETcDmwG5vfzXIOMkhZhGyVNahY6qQAi4npSw5fVr61RjgIbgS3Voqwn5wygGucvAuso81orzR7gUUnbe/3BhAFU9+/WAi8BV5SprVE+Bh6XdLD7g7MCiIhrSBeeb26gsCY5DjxL14HKeADVrz5EGuv2KecU4gvgHkmHoAogImYCI8CdLRbWJL8Bd0vaPhARlwCfAre0XFTTjAJ3dEivi/Ot8ZCW2SMd4KG2K2mROR1gVttVtEnpLbEpz4UA2i6gbS4EQOGDh6lOh3Sef76y+1+DGegCZWE/6gAAAABJRU5ErkJggg==" x="606px" y="389px" mask="url(#clip1)" />
+  </g>
+</svg>

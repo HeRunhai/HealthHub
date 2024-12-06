@@ -1,0 +1,90 @@
+/**
+ * 修改common/diygw-ui/index.scss 可以取消相关组件样式
+ * 修改common/diygw-ui/iconfont.scss 如果发布APP可能会图标字体找不到的问题，加上https测试
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.content[data-v-838b72c9] {
+  padding: 1.875rem 3.125rem 3.125rem;
+}
+.logo[data-v-838b72c9] {
+  text-align: center;
+}
+.logo uni-image[data-v-838b72c9] {
+  height: 6.25rem;
+  width: 6.25rem;
+  margin: 0 0 1.25rem;
+}
+.uni-form-item[data-v-838b72c9] {
+  margin-bottom: 1.25rem;
+  padding: 0;
+  border-bottom: 1px solid #e3e3e3;
+}
+.uni-form-item .uni-input[data-v-838b72c9] {
+  font-size: 0.9375rem;
+  padding: 7px 0;
+  height: 2.1875rem;
+}
+.user-icon[data-v-838b72c9] {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.user-icon .image[data-v-838b72c9] {
+  width: 4.6875rem;
+  height: 4.6875rem;
+}
+.column-with-btn[data-v-838b72c9] {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.column-with-btn uni-button[data-v-838b72c9] {
+  font-size: 0.75rem;
+  margin: 0;
+  width: 5.625rem;
+  text-align: center;
+}
+.column-with-btn uni-button[data-v-838b72c9]:after {
+  border: none;
+}
+.column-with-btn uni-button.active[data-v-838b72c9] {
+  background-color: #b49950;
+  color: #fff;
+}
+.img-captcha[data-v-838b72c9] {
+  width: 4.6875rem;
+  height: 1.875rem;
+}
+uni-button[type=primary][data-v-838b72c9] {
+  background-color: #1E90FF;
+  border-radius: 0;
+  font-size: 1.0625rem;
+  margin-top: 1.875rem;
+}
+.links[data-v-838b72c9] {
+  text-align: center;
+  margin-top: 1.25rem;
+  font-size: 0.8125rem;
+  color: #999;
+}
+.links uni-view[data-v-838b72c9] {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 0.3125rem;
+}
+.links .link-highlight[data-v-838b72c9] {
+  color: #b49950;
+}

@@ -1,0 +1,90 @@
+/**
+ * 修改common/diygw-ui/index.scss 可以取消相关组件样式
+ * 修改common/diygw-ui/iconfont.scss 如果发布APP可能会图标字体找不到的问题，加上https测试
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.flex-clz.data-v-3a8da1f0 {
+  padding-top: 2px;
+  box-shadow: 0px 1px 4px 2px rgba(31, 31, 31, 0.16);
+  overflow: visible;
+  left: 0px;
+  bottom: 0px;
+  padding-left: 2px;
+  padding-bottom: 2px;
+  padding-right: 2px;
+}
+.flex2-clz.data-v-3a8da1f0 {
+  flex-shrink: 0;
+  width: 70px !important;
+}
+.icon1-clz.data-v-3a8da1f0 {
+  color: #767272;
+}
+.icon1.data-v-3a8da1f0 {
+  font-size: 32px;
+}
+.flex1-clz.data-v-3a8da1f0 {
+  flex-shrink: 0;
+  width: 82px !important;
+}
+.text2-clz.data-v-3a8da1f0 {
+  padding-top: 2px;
+  border-bottom-left-radius: 60px;
+  z-index: 1;
+  color: #ffffff;
+  padding-left: 3px;
+  font-size: 10rpx !important;
+  padding-bottom: 2px;
+  border-top-right-radius: 60px;
+  right: -5px;
+  background-color: #ff0000;
+  overflow: hidden;
+  top: -5px;
+  border-top-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+  position: absolute;
+  padding-right: 3px;
+}
+.icon2-clz.data-v-3a8da1f0 {
+  color: #767272;
+}
+.icon2.data-v-3a8da1f0 {
+  font-size: 32px;
+}
+.flex6-clz.data-v-3a8da1f0 {
+  flex-shrink: 0;
+  width: 70px !important;
+}
+.icon-clz.data-v-3a8da1f0 {
+  color: #767272;
+}
+.icon.data-v-3a8da1f0 {
+  font-size: 32px;
+}
+.flex7-clz.data-v-3a8da1f0 {
+  flex-shrink: 0;
+  width: 70px !important;
+}
+.icon4-clz.data-v-3a8da1f0 {
+  color: #767272;
+}
+.icon4.data-v-3a8da1f0 {
+  font-size: 32px;
+}
+.container18437.data-v-3a8da1f0 {
+  padding-left: 0px;
+  padding-right: 0px;
+  font-size: 14px;
+}

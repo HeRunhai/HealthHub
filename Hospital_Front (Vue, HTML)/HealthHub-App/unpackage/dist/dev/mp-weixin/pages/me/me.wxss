@@ -1,0 +1,301 @@
+/**
+ * 修改common/diygw-ui/index.scss 可以取消相关组件样式
+ * 修改common/diygw-ui/iconfont.scss 如果发布APP可能会图标字体找不到的问题，加上https测试
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.status_bar.data-v-19c123a7 {
+  height: var(--status-bar-height);
+  width: 100%;
+  background-color: #87CEFA;
+}
+.flex-clz.data-v-19c123a7 {
+  color: #ffffff;
+}
+.flex2-clz.data-v-19c123a7 {
+  margin-left: 15px;
+  width: calc(100% - 15px - 15px) !important;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-right: 15px;
+}
+.image1-clz.data-v-19c123a7 {
+  margin-left: 15px;
+  border: 3px solid #f0ba01;
+  border-bottom-left-radius: 60px;
+  overflow: hidden;
+  border-top-left-radius: 60px;
+  margin-top: 0px;
+  border-top-right-radius: 60px;
+  border-bottom-right-radius: 60px;
+  margin-bottom: 0px;
+  margin-right: 15px;
+}
+.flex4-clz.data-v-19c123a7 {
+  flex: 1;
+}
+.text2-clz.data-v-19c123a7 {
+  font-weight: bold;
+  font-size: 14px !important;
+}
+.text3-clz.data-v-19c123a7 {
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: 14px !important;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+}
+.flex7-clz.data-v-19c123a7 {
+  margin-left: 0px;
+  width: 100% !important;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 0px;
+}
+.text5-clz.data-v-19c123a7 {
+  background-color: #f0ba01;
+  padding-top: 3px;
+  border-bottom-left-radius: 0px;
+  overflow: hidden;
+  padding-left: 10px;
+  padding-bottom: 3px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  padding-right: 10px;
+}
+.text7-clz.data-v-19c123a7 {
+  background-color: #5e3b0a;
+  padding-top: 3px;
+  border-bottom-left-radius: 0px;
+  overflow: hidden;
+  padding-left: 10px;
+  padding-bottom: 3px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 12px;
+  padding-right: 10px;
+}
+.flex3-clz.data-v-19c123a7 {
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e2e2e2;
+  padding-right: 10px;
+}
+.text-clz.data-v-19c123a7 {
+  padding-top: 0px;
+  flex: 1;
+  padding-left: 5px;
+  font-size: 16px !important;
+  padding-bottom: 0px;
+  padding-right: 0px;
+}
+.icon-clz.data-v-19c123a7 {
+  color: #939393;
+}
+.icon.data-v-19c123a7 {
+  font-size: 14px;
+}
+.flex6-clz.data-v-19c123a7 {
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e2e2e2;
+  padding-right: 10px;
+}
+.text4-clz.data-v-19c123a7 {
+  padding-top: 0px;
+  flex: 1;
+  padding-left: 5px;
+  font-size: 16px !important;
+  padding-bottom: 0px;
+  padding-right: 0px;
+}
+.text6-clz.data-v-19c123a7 {
+  color: #fd6b03;
+  font-size: 16px !important;
+}
+.icon2-clz.data-v-19c123a7 {
+  color: #939393;
+}
+.icon2.data-v-19c123a7 {
+  font-size: 14px;
+}
+.flex8-clz.data-v-19c123a7 {
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e2e2e2;
+  padding-right: 10px;
+}
+.text8-clz.data-v-19c123a7 {
+  padding-top: 0px;
+  flex: 1;
+  padding-left: 5px;
+  font-size: 16px !important;
+  padding-bottom: 0px;
+  padding-right: 0px;
+}
+.icon3-clz.data-v-19c123a7 {
+  color: #939393;
+}
+.icon3.data-v-19c123a7 {
+  font-size: 14px;
+}
+.flex9-clz.data-v-19c123a7 {
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e2e2e2;
+  padding-right: 10px;
+}
+.text9-clz.data-v-19c123a7 {
+  padding-top: 0px;
+  flex: 1;
+  padding-left: 5px;
+  font-size: 16px !important;
+  padding-bottom: 0px;
+  padding-right: 0px;
+}
+.icon4-clz.data-v-19c123a7 {
+  color: #939393;
+}
+.icon4.data-v-19c123a7 {
+  font-size: 14px;
+}
+.flex10-clz.data-v-19c123a7 {
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e2e2e2;
+  padding-right: 10px;
+}
+.text11-clz.data-v-19c123a7 {
+  padding-top: 0px;
+  padding-left: 5px;
+  font-size: 16px !important;
+  padding-bottom: 0px;
+  padding-right: 0px;
+}
+.text12-clz.data-v-19c123a7 {
+  padding-top: 0px;
+  color: #939393;
+  flex: 1;
+  padding-left: 5px;
+  padding-bottom: 0px;
+  text-align: right;
+  padding-right: 5px;
+}
+.icon5-clz.data-v-19c123a7 {
+  color: #939393;
+}
+.icon5.data-v-19c123a7 {
+  font-size: 14px;
+}
+.flex11-clz.data-v-19c123a7 {
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e2e2e2;
+  padding-right: 10px;
+}
+.text13-clz.data-v-19c123a7 {
+  padding-top: 0px;
+  flex: 1;
+  padding-left: 5px;
+  font-size: 16px !important;
+  padding-bottom: 0px;
+  padding-right: 0px;
+}
+.icon6-clz.data-v-19c123a7 {
+  color: #939393;
+}
+.icon6.data-v-19c123a7 {
+  font-size: 14px;
+}
+.flex12-clz.data-v-19c123a7 {
+  padding-top: 2px;
+  box-shadow: 0px 1px 4px 2px rgba(31, 31, 31, 0.16);
+  overflow: visible;
+  left: 0px;
+  bottom: 0px;
+  padding-left: 2px;
+  padding-bottom: 2px;
+  padding-right: 2px;
+}
+.flex13-clz.data-v-19c123a7 {
+  flex-shrink: 0;
+  width: 70px !important;
+}
+.icon1-clz.data-v-19c123a7 {
+  color: #767272;
+}
+.icon1.data-v-19c123a7 {
+  font-size: 32px;
+}
+.flex14-clz.data-v-19c123a7 {
+  flex-shrink: 0;
+  width: 82px !important;
+}
+.text10-clz.data-v-19c123a7 {
+  padding-top: 2px;
+  border-bottom-left-radius: 60px;
+  z-index: 1;
+  color: #ffffff;
+  padding-left: 3px;
+  font-size: 10rpx !important;
+  padding-bottom: 2px;
+  border-top-right-radius: 60px;
+  right: -5px;
+  background-color: #ff0000;
+  overflow: hidden;
+  top: -5px;
+  border-top-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+  position: absolute;
+  padding-right: 3px;
+}
+.icon7-clz.data-v-19c123a7 {
+  color: #767272;
+}
+.icon7.data-v-19c123a7 {
+  font-size: 32px;
+}
+.flex15-clz.data-v-19c123a7 {
+  flex-shrink: 0;
+  width: 70px !important;
+}
+.icon8-clz.data-v-19c123a7 {
+  color: #767272;
+}
+.icon8.data-v-19c123a7 {
+  font-size: 32px;
+}
+.flex16-clz.data-v-19c123a7 {
+  flex-shrink: 0;
+  width: 70px !important;
+}
+.icon9-clz.data-v-19c123a7 {
+  color: #767272;
+}
+.icon9.data-v-19c123a7 {
+  font-size: 32px;
+}
+.container18437.data-v-19c123a7 {
+  padding-left: 0px;
+  padding-right: 0px;
+  font-size: 14px;
+}

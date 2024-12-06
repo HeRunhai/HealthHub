@@ -1,0 +1,195 @@
+/**
+ * 修改common/diygw-ui/index.scss 可以取消相关组件样式
+ * 修改common/diygw-ui/iconfont.scss 如果发布APP可能会图标字体找不到的问题，加上https测试
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.status_bar.data-v-e3c62018 {
+  height: var(--status-bar-height);
+  width: 100%;
+  background-color: #87CEFA;
+}
+.search-clz.data-v-e3c62018 {
+  margin-left: 5px;
+  width: calc(100% - 5px - 5px) !important;
+  font-size: 14px !important;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+.flex12-clz.data-v-e3c62018 {
+  margin-left: 5px;
+  width: calc(100% - 5px - 5px) !important;
+  font-size: 14px !important;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+.flex-clz.data-v-e3c62018 {
+  background-color: #ffffff;
+  padding-top: 8px;
+  padding-left: 8px;
+  padding-bottom: 8px;
+  padding-right: 8px;
+}
+.avatar-badge-0.data-v-e3c62018 {
+  padding-left: 0px;
+  padding-right: 0px;
+  right: -5px;
+  top: -8px;
+}
+.flex1-clz.data-v-e3c62018 {
+  padding-top: 0px;
+  overflow: hidden;
+  padding-left: 5px;
+  padding-bottom: 0px;
+  padding-right: 0px;
+}
+.text-clz.data-v-e3c62018 {
+  color: #5d5d5d;
+  font-size: 14px !important;
+}
+.text2-clz.data-v-e3c62018 {
+  color: #5d5d5d;
+  flex: 1;
+}
+.flex8-clz.data-v-e3c62018 {
+  background-color: #ffffff;
+  padding-top: 8px;
+  padding-left: 8px;
+  padding-bottom: 8px;
+  padding-right: 8px;
+}
+.avatar2-badge-0.data-v-e3c62018 {
+  padding-left: 0px;
+  padding-right: 0px;
+  right: -2px;
+  top: -8px;
+}
+.flex9-clz.data-v-e3c62018 {
+  padding-top: 0px;
+  overflow: hidden;
+  padding-left: 5px;
+  padding-bottom: 0px;
+  padding-right: 0px;
+}
+.text6-clz.data-v-e3c62018 {
+  color: #5d5d5d;
+  font-size: 14px !important;
+}
+.text8-clz.data-v-e3c62018 {
+  color: #5d5d5d;
+  flex: 1;
+}
+.flex3-clz.data-v-e3c62018 {
+  background-color: #ffffff;
+  padding-top: 8px;
+  padding-left: 8px;
+  padding-bottom: 8px;
+  padding-right: 8px;
+}
+.avatar1-badge-0.data-v-e3c62018 {
+  padding-left: 0px;
+  padding-right: 0px;
+  right: -5px;
+  top: -8px;
+}
+.flex5-clz.data-v-e3c62018 {
+  padding-top: 0px;
+  overflow: hidden;
+  padding-left: 5px;
+  padding-bottom: 0px;
+  padding-right: 0px;
+}
+.text3-clz.data-v-e3c62018 {
+  color: #5d5d5d;
+  font-size: 14px !important;
+}
+.text5-clz.data-v-e3c62018 {
+  color: #5d5d5d;
+  flex: 1;
+}
+.flex13-clz.data-v-e3c62018 {
+  padding-top: 2px;
+  box-shadow: 0px 1px 4px 2px rgba(31, 31, 31, 0.16);
+  overflow: visible;
+  left: 0px;
+  bottom: 0px;
+  padding-left: 2px;
+  padding-bottom: 2px;
+  padding-right: 2px;
+}
+.flex14-clz.data-v-e3c62018 {
+  flex-shrink: 0;
+  width: 70px !important;
+}
+.icon1-clz.data-v-e3c62018 {
+  color: #767272;
+}
+.icon1.data-v-e3c62018 {
+  font-size: 32px;
+}
+.flex15-clz.data-v-e3c62018 {
+  flex-shrink: 0;
+  width: 82px !important;
+}
+.text10-clz.data-v-e3c62018 {
+  padding-top: 2px;
+  border-bottom-left-radius: 60px;
+  z-index: 1;
+  color: #ffffff;
+  padding-left: 3px;
+  font-size: 10rpx !important;
+  padding-bottom: 2px;
+  border-top-right-radius: 60px;
+  right: -5px;
+  background-color: #ff0000;
+  overflow: hidden;
+  top: -5px;
+  border-top-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+  position: absolute;
+  padding-right: 3px;
+}
+.icon2-clz.data-v-e3c62018 {
+  color: #767272;
+}
+.icon2.data-v-e3c62018 {
+  font-size: 32px;
+}
+.flex16-clz.data-v-e3c62018 {
+  flex-shrink: 0;
+  width: 70px !important;
+}
+.icon-clz.data-v-e3c62018 {
+  color: #767272;
+}
+.icon.data-v-e3c62018 {
+  font-size: 32px;
+}
+.flex17-clz.data-v-e3c62018 {
+  flex-shrink: 0;
+  width: 70px !important;
+}
+.icon4-clz.data-v-e3c62018 {
+  color: #767272;
+}
+.icon4.data-v-e3c62018 {
+  font-size: 32px;
+}
+.container18437.data-v-e3c62018 {
+  padding-left: 0px;
+  padding-right: 0px;
+  font-size: 14px;
+}
