@@ -75,13 +75,15 @@ An economic analysis has confirmed the cost-effectiveness of HealthHub, making i
    git clone https://github.com/your-repo/healthhub.git
    cd healthhub
 2. Set up the back-end services:
-cd Hospital_End
-mvn install
-mvn spring-boot:run
+   ```bash
+   cd Hospital_End
+   mvn install
+   mvn spring-boot:run
 3. Set up the front-end applications:
-cd Hospital_Front
-npm install
-npm run serve
+   ```bash
+   cd Hospital_Front
+   npm install
+   npm run serve
 4. Access the system:
 Mobile App: Open the app on your device (setup instructions in the mobile app folder).
 Web App: Open http://localhost:8080 in your browser.
